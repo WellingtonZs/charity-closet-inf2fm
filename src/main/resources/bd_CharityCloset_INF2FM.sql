@@ -6,139 +6,222 @@ DROP DATABASE bd_CharityCloset_INF2FM
 GO
 CREATE DATABASE bd_CharityCloset_INF2FM
 GO
+
 USE bd_CharityCloset_INF2FM
 
-CREATE TABLE Usuario
+
+
+--Criação das tabelas:
+
+
+--ConfiguraçõesGerais:
+CREATE TABLE ConfiguracoesGerais
 (
-	id				INT				IDENTITY,
-	nome			VARCHAR(100)	NOT NULL,
-	sobrenome		VARCHAR(100)	NOT NULL,
-	email			VARCHAR(100)	NOT NULL,
-	senha			VARCHAR(100)	NOT NULL,
-	telefone		VARCHAR(20)		NOT NULL,
-	cpf				VARCHAR(11)		NOT NULL,
-	data_nasc		DATE(8)			NOT NULL,
-	cep				CHAR(7)			NOT NULL,
-	uf				CHAR(2)			NOT NULL,
-	data_cadastro	DATE(8)			NOT NULL,
-	genero			VARCHAR(10)		NOT NULL,
-	biografia		VARCHAR(200)	NOT NULL,
-	statusUsuario	VARCHAR(20)		NOT NULL,
-
-	PRIMARY KEY (id)
-)
-INSERT Usuario (nome, sobrenome, email, senha, telefone, cpf, data_nasc, cep, uf, data_cadastro, genero, biografia) 
-		VALUES ('')
-
-CREATE TABLE ONG
-(
-	id				INT				IDENTITY,
-	nome			VARCHAR(100)	NOT NULL,
-	email			VARCHAR(100)	NOT NULL,
-	senha			VARCHAR(100)	NOT NULL,
-	telefone		VARCHAR(20)		NOT NULL,
-	cep				CHAR(7)			NOT NULL,
-	data_cadastro	DATE(8)			NOT NULL,
-	sobre_nos		VARCHAR(200)	NOT NULL,
-	uf				CHAR(2)			NOT NULL,
-	cnpj			VARCHAR(14)		NOT NULL,
-	statusONG		VARCHAR(20)		NOT NULL,
-	
-	PRIMARY KEY (id)
-)
-INSERT ONG (nome, email, senha, telefone, cep, data_cadastro, sobre_nos, uf, cnpj, statusONG) 
-		VALUES ('')
-
-CREATE TABLE Categoria_Roupas
-(
-	id				INT				IDENTITY,
-	genero			VARCHAR(10)		NOT NULL,
-	tamanho			VARCHAR(5)		NOT NULL,
-	statusCategoria	VARCHAR(20)		NOT NULL,
-	PRIMARY KEY (id)
-)
-INSERT Categoria_Roupas (genero, tamanho, statusCategoria) 
-		VALUES ('')
-
-CREATE TABLE Administrador
-(
-	id				INT				IDENTITY,
-	cpf				VARCHAR(11)		NOT NULL,
-	email			VARCHAR(100)	NOT NULL,
-	nome			VARCHAR(100)	NOT NULL,
-	sobrenome		VARCHAR(100)	NOT NULL,
-	senha			VARCHAR(100)	NOT NULL,
-	uf				CHAR(2)			NOT NULL,
-	data_nasc		DATE(8)			NOT NULL,
-	cep				CHAR(7)			NOT NULL,
-	data_cadastro	DATE(8)			NOT NULL,
-	telefone		VARCHAR(20)		NOT NULL,
-	statusAdmin		VARCHAR(20)		NOT NULL,
-
-	PRIMARY KEY (id)
-)
-INSERT Administrador (cpf, email, nome, sobrenome, senha, uf, data_nasc, cep, data_cadastro, telefone, statusAdmin) 
-		VALUES ('')
-
-CREATE TABLE Contato_Suporte
-(
-	id				INT				IDENTITY,
-	assunto			VARCHAR(50)		NOT NULL,
-	mensagem		VARCHAR(200)	NOT NULL,
-	data_contato	DATE(8)			NOT NULL,
-	statusContato	VARCHAR(20)		NOT NULL,
-
-	PRIMARY KEY (id)
-)
-INSERT Contato_Suporte (assunto, mensagem, data_contato, statusContato)
-		VALUES('')
-
-CREATE TABLE Aprovacao_ONG
-(
-	id				INT				IDENTITY,
-	data_aprovacao	DATE(8)			NOT NULL,
-	statusAprovacao	VARCHAR(20)		NOT NULL,
-
-	PRIMARY KEY (id)
-)
-INSERT Aprovacao_ONG (data_aprovacao, statusAprovacao)
-		VALUES('')
-
-CREATE TABLE Reprovacao_ONG
-(
-	id				 INT				IDENTITY,
-	data_reprovacao	 DATE(8)			NOT NULL,
-	statusReprovacao VARCHAR(20)		NOT NULL,
-
-	PRIMARY KEY (id)
-)
-INSERT Reprovacao_ONG (data_reprovacao, statusReprovacao)
-		VALUES('')
-
-CREATE TABLE Avaliacao
-(
-	id				INT				IDENTITY,
-	comentario		VARCHAR(100)	NOT NULL,
-	nota			INT(10)			NOT NULL,
-	statusAvaliacao VARCHAR(20)		NOT NULL,
-
-	PRIMARY KEY (id)
-)
-INSERT Avaliacao (comentario, nota, statusAvaliacao)
-		VALUES('')
-
-CREATE TABLE Configuracoes_Gerais
-(
-	id						INT				IDENTITY,
-	politicas_privacidade	VARCHAR(200)	NOT NULL,
-	termos_uso				VARCHAR(200)	NOT NULL,
-	outras_configuracoes	VARCHAR(200)	NOT NULL,
+	id						BIGINT				IDENTITY,
+	politicasPrivacidade	VARCHAR(200)	NOT NULL,
+	termosUso				VARCHAR(200)	NOT NULL,
+	outrasConfiguracoes		VARCHAR(200)	NOT NULL,
 	statusConfiguracoes		VARCHAR(20)		NOT NULL,
 
 	PRIMARY KEY (id)
 )
-INSERT Configuracoes_Gerais (politicas_privacidade, termos_uso, outras_configuracoes, statusConfiguracoes)
-		VALUES('')
+
+--Avalição:
+CREATE TABLE Avaliacao
+(
+	id				BIGINT				IDENTITY,
+	comentario		VARCHAR(100)	NOT NULL,
+	nota			INT				NOT NULL,
+	statusAvaliacao VARCHAR(20)		NOT NULL,
+
+	PRIMARY KEY (id)
+)
+
+--Usuário:
+CREATE TABLE Usuario
+(
+	id				BIGINT			IDENTITY,
+	nome			VARCHAR(100)	NOT NULL,
+	sobrenome		VARCHAR(100)	NOT NULL,
+	email			VARCHAR(100)	UNIQUE		NOT NULL,
+	senha			VARCHAR(100)	NOT NULL,
+	telefone		VARCHAR(20)		NOT NULL,
+	nivelAcesso		VARCHAR(10)		NULL, --ADMIN ou USER
+	foto			VARBINARY(MAX)	NULL,
+	cpf				VARCHAR(11)		NOT NULL,
+	dataNasc		DATE			NOT NULL,
+	cep				CHAR(7)			NOT NULL,
+	uf				CHAR(2)			NOT NULL,
+	dataCadastro	DATE			NOT NULL,
+	genero			VARCHAR(10)		NOT NULL,
+	biografia		VARCHAR(200)	NOT NULL,
+	statusUsuario	VARCHAR(20)		NOT NULL,
+	config_id		BIGINT				NOT NULL,
+	avaliacao_id	BIGINT				NOT NULL,
+
+	PRIMARY KEY (id),
+	FOREIGN KEY (config_id) REFERENCES ConfiguracoesGerais(id),
+	FOREIGN KEY	(avaliacao_id) REFERENCES Avaliacao(id)
+)
+
+--ONG:
+CREATE TABLE ONG
+(
+	id				BIGINT				IDENTITY,
+	nome			VARCHAR(100)	NOT NULL,
+	email			VARCHAR(100)	UNIQUE		NOT NULL,
+	senha			VARCHAR(100)	NOT NULL,
+	telefone		VARCHAR(20)		NOT NULL,
+	nivelAcesso		VARCHAR(10)		NULL, --ADMIN ou USER
+	foto			VARBINARY(MAX)	NULL,
+	cep				CHAR(7)			NOT NULL,
+	dataCadastro	DATE			NOT NULL,
+	sobreNos		VARCHAR(200)	NOT NULL,
+	uf				CHAR(2)			NOT NULL,
+	cnpj			VARCHAR(14)		NOT NULL,
+	statusONG		VARCHAR(20)		NOT NULL,
+	config_id		BIGINT				NOT NULL,
+	avaliacao_id	BIGINT				NOT NULL,
+
+	PRIMARY KEY (id),
+	FOREIGN KEY (config_id) REFERENCES ConfiguracoesGerais(id),
+	FOREIGN KEY	(avaliacao_id) REFERENCES Avaliacao(id)
+)
+
+--Administrador:
+CREATE TABLE Administrador
+(
+	id				BIGINT			IDENTITY,
+	cpf				VARCHAR(11)		NOT NULL,
+	email			VARCHAR(100)	UNIQUE		NOT NULL,
+	nome			VARCHAR(100)	NOT NULL,
+	sobrenome		VARCHAR(100)	NOT NULL,
+	senha			VARCHAR(100)	NOT NULL,
+	uf				CHAR(2)			NOT NULL,
+	dataNasc		DATE			NOT NULL,
+	cep				CHAR(7)			NOT NULL,
+	dataCadastro	DATE			NOT NULL,
+	telefone		VARCHAR(20)		NOT NULL,
+	nivelAcesso		VARCHAR(10)		NULL, --ADMIN ou USER
+	foto			VARBINARY(MAX)	NULL,
+	statusAdmin		VARCHAR(20)		NOT NULL,
+	config_id		BIGINT				NOT NULL,
+
+	PRIMARY KEY (id),
+	FOREIGN KEY (config_id) REFERENCES ConfiguracoesGerais(id)
+)
+
+--CategoriaRoupas:
+CREATE TABLE CategoriaRoupas
+(
+	id				BIGINT			IDENTITY,
+	genero			VARCHAR(10)		NOT NULL,
+	tamanho			VARCHAR(5)		NOT NULL,
+	statusCategoria	VARCHAR(20)		NOT NULL,
+
+	PRIMARY KEY (id)
+)
+
+--ContatoSuporte:
+CREATE TABLE ContatoSuporte
+(
+	id				BIGINT			IDENTITY,
+	assunto			VARCHAR(50)		NOT NULL,
+	mensagem		VARCHAR(200)	NOT NULL,
+	dataContato		DATE			NOT NULL,
+	statusContato	VARCHAR(20)		NOT NULL,
+	usuario_id		BIGINT			NOT NULL,
+
+	PRIMARY KEY (id),
+	FOREIGN KEY (usuario_id)	REFERENCES Usuario (id)
+)
+
+--AprovacaoONG
+CREATE TABLE AprovacaoONG
+(
+	id				BIGINT			IDENTITY,
+	dataAprovacao	DATE			NOT NULL,
+	statusAprovacao	VARCHAR(20)		NOT NULL,
+	admin_id		BIGINT			NOT NULL,
+
+	PRIMARY KEY (id),
+	FOREIGN KEY (admin_id)	REFERENCES Administrador(id)
+)
+
+--ReprovacaoONG
+CREATE TABLE ReprovacaoONG
+(
+	id				 BIGINT				IDENTITY,
+	dataReprovacao	 DATE				NOT NULL,
+	statusReprovacao VARCHAR(20)		NOT NULL,
+	admin_id		 BIGINT				NOT NULL,
+
+	PRIMARY KEY (id),
+	FOREIGN KEY (admin_id)	REFERENCES Administrador(id)
+)
+
+
+
+--Inserts das Tabelas:
+
+--Usuario:
+INSERT Usuario (nome, sobrenome, email, senha, telefone, cpf, dataNasc, cep, uf, dataCadastro, genero, biografia, statusUsuario) 
+VALUES ('')
+
+--ONG:
+INSERT ONG (nome, email, senha, telefone, cep, dataCadastro, sobreNos, uf, cnpj, statusONG) 
+VALUES ('')
+
+--Administrador:
+INSERT Administrador (cpf, email, nome, sobrenome, senha, uf, dataNasc, cep, dataCadastro, telefone, statusAdmin) 
+VALUES ('')
+
+--ConfiguraçõesGerais:
+INSERT ConfiguracoesGerais (politicasPrivacidade, termosUso, outrasConfiguracoes, statusConfiguracoes)
+VALUES('')
+
+--Avaliacao:
+INSERT Avaliacao (comentario, nota, statusAvaliacao)
+VALUES('')
+
+--Aprovacao:
+INSERT AprovacaoONG (dataAprovacao, statusAprovacao)
+VALUES('')
+
+--Reprovacao:
+INSERT ReprovacaoONG (dataReprovacao, statusReprovacao)
+VALUES('')
+
+--ContatoSuporte:
+INSERT ContatoSuporte (assunto, mensagem, dataContato, statusContato, usuario_id)
+VALUES('aaaaaaa', 'aaaa', '31/08/2013','ativo', 1)
+
+--CategoriaRoupas:
+INSERT CategoriaRoupas (genero, tamanho, statusCategoria) 
+VALUES ('')
+
+--Selects:
+
+--ConfiguraçõesGerais:
+SELECT * FROM ConfiguracoesGerais
+--Avaliacao
+SELECT * FROM Avaliacao
+--Usuário
+SELECT * FROM Usuario
+--ONG
+SELECT * FROM ONG
+--Administrador
+SELECT * FROM Administrador
+--CategoriaRoupas
+SELECT * FROM CategoriaRoupas
+--ContatoSuporte
+SELECT * FROM ContatoSuporte
+--AprovaçãoONG
+SELECT * FROM AprovacaoONG
+--ReprovaçãoONG
+SELECT * FROM ReprovacaoONG
+
+
 
 
 --Protótipo SQL Charity Closet by ZsTech^
