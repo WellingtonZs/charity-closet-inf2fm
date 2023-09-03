@@ -14,7 +14,7 @@ USE bd_CharityCloset_INF2FM
 --Criação das tabelas:
 
 
---ConfiguraçõesGerais:
+--ConfiguracoesGerais:
 CREATE TABLE ConfiguracoesGerais
 (
 	id						BIGINT				IDENTITY,
@@ -26,7 +26,7 @@ CREATE TABLE ConfiguracoesGerais
 	PRIMARY KEY (id)
 )
 
---Avalição:
+--Avalicao:
 CREATE TABLE Avaliacao
 (
 	id				BIGINT				IDENTITY,
@@ -37,7 +37,7 @@ CREATE TABLE Avaliacao
 	PRIMARY KEY (id)
 )
 
---Usuário:
+--Usuario:
 CREATE TABLE Usuario
 (
 	id				BIGINT			IDENTITY,
@@ -56,8 +56,8 @@ CREATE TABLE Usuario
 	genero			VARCHAR(10)		NOT NULL,
 	biografia		VARCHAR(200)	NOT NULL,
 	statusUsuario	VARCHAR(20)		NOT NULL,
-	config_id		BIGINT				NOT NULL,
-	avaliacao_id	BIGINT				NOT NULL,
+	config_id		BIGINT			NOT NULL,
+	avaliacao_id	BIGINT			NOT NULL,
 
 	PRIMARY KEY (id),
 	FOREIGN KEY (config_id) REFERENCES ConfiguracoesGerais(id),
@@ -80,8 +80,8 @@ CREATE TABLE ONG
 	uf				CHAR(2)			NOT NULL,
 	cnpj			VARCHAR(14)		NOT NULL,
 	statusONG		VARCHAR(20)		NOT NULL,
-	config_id		BIGINT				NOT NULL,
-	avaliacao_id	BIGINT				NOT NULL,
+	config_id		BIGINT			NOT NULL,
+	avaliacao_id	BIGINT			NOT NULL,
 
 	PRIMARY KEY (id),
 	FOREIGN KEY (config_id) REFERENCES ConfiguracoesGerais(id),
@@ -105,7 +105,7 @@ CREATE TABLE Administrador
 	nivelAcesso		VARCHAR(10)		NULL, --ADMIN ou USER
 	foto			VARBINARY(MAX)	NULL,
 	statusAdmin		VARCHAR(20)		NOT NULL,
-	config_id		BIGINT				NOT NULL,
+	config_id		BIGINT			NOT NULL,
 
 	PRIMARY KEY (id),
 	FOREIGN KEY (config_id) REFERENCES ConfiguracoesGerais(id)
@@ -163,10 +163,10 @@ CREATE TABLE ReprovacaoONG
 
 
 --Inserts das Tabelas:
-
+-- resolver erro: Falha ao converter data e/ou hora da cadeia de caracteres.
 --Usuario:
-INSERT Usuario (nome, sobrenome, email, senha, telefone, cpf, dataNasc, cep, uf, dataCadastro, genero, biografia, statusUsuario) 
-VALUES ('')
+INSERT Usuario(nome, sobrenome, email, senha, telefone, nivelAcesso, foto, cpf, dataNasc, cep, uf, dataCadastro, genero, biografia, statusUsuario) 
+VALUES ('zezo', 'lindo','zezo@zezo.com','123', '11952303304', 'ADMIN',null, '12332112323', '2021-01-08', '1231233', 'SP', '10112011', 'aaaa', 'eu sou o zezo e sou lindo', 'ATIVO')
 
 --ONG:
 INSERT ONG (nome, email, senha, telefone, cep, dataCadastro, sobreNos, uf, cnpj, statusONG) 
@@ -194,7 +194,7 @@ VALUES('')
 
 --ContatoSuporte:
 INSERT ContatoSuporte (assunto, mensagem, dataContato, statusContato, usuario_id)
-VALUES('aaaaaaa', 'aaaa', '31/08/2013','ativo', 1)
+VALUES('')
 
 --CategoriaRoupas:
 INSERT CategoriaRoupas (genero, tamanho, statusCategoria) 
