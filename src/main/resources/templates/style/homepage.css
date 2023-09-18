@@ -1,0 +1,132 @@
+
+:root{
+    --titulo-homepage:#fff;
+    --roxo-destaque:#8224fe;
+}
+
+.parte1home{
+    background-image: url(../assets/background1homepage.png);
+    background-size: cover;
+    background-position: fixed;
+}
+
+#titulo1-1{
+    color: var(--roxo-destaque);
+    text-align: center;
+    padding-top: 5%;
+    font-size: 50px;
+}
+
+#text-doe{
+    color: var(--titulo-homepage);
+    text-align: center;
+    padding-top: 1%;
+    font-size: 70px;
+}
+
+#desc-doe{
+    color: var(--titulo-homepage);
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+#link-doe{
+    background-color:var(--roxo-destaque) ;
+    color: var(--titulo-homepage);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    color:#000;
+    border-radius:15px;
+}
+
+#link-doe:hover{
+    color:#fff;
+    transition-duration: 0.8s;
+}
+
+#link-button-doe{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 200px;
+}
+
+.oddshome{
+    background-color: #212121;
+    display:flex;
+    margin-top: -10px;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-bottom: 100px;
+}
+
+#roupahome{
+    width: 720px;
+    padding:20px;
+    padding-right: 20px;
+    border-radius: 50px;
+}
+
+#title-odds{
+    color: var(--titulo-homepage);
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.avaliacao{
+    background-color: #393E46;
+    margin-top: -10px;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-bottom: 100px;
+}
+
+#text-avaliacao{
+    color: #fff;
+    margin-left: 10%;
+    
+}
+
+#nome-doador{
+    color:#fff;
+    margin-left: 15%;
+    margin-top: 20px;
+}
+
+.onu{
+    background-color: #101010;
+    text-align: center;
+}
+
+.odslogos{
+    padding-top: 70px;
+}
+
+#logoods{
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+details{
+    color:#fff;
+    font-family: helvetica;
+    font-weight: bolder;
+    padding: 50px;
+    font-size: 30px;
+}
+
+#text-desc-ods{
+    font-size: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 30px;
+}

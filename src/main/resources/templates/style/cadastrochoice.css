@@ -1,0 +1,54 @@
+.coracaocad {
+    text-align: center;
+}
+
+#coracao {
+    width: 150px;
+}
+
+.escolha-main{
+    background-color: #181818;
+}
+
+.escolha-cad{
+    background-color: #fff;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+#title-titulo-escolha{
+    color: #000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 50px;
+}
+
+.escolhas-div{
+    margin: 50px;
+}
+
+#link-escolha {
+    background: linear-gradient(to right, #707cff 5%, #f952ff 100%);
+    background-color: #707cff;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 18px;
+    padding: 8px 38px;
+    text-decoration: none;
+    border: none;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+#link-escolha:hover {
+    background: linear-gradient(to right, #f952ff 5%, #707cff 100%);
+    background-color: #f952ff;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+}

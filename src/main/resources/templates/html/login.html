@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../script/login.js"></script>
+    <link href="../style/login.css" rel="stylesheet">
+    <link href="../style/header.css" rel="stylesheet">
+    <link href="../style/footer.css" rel="stylesheet">
+    <link href="../style/reset.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Home | Charity Closet</title>
+</head>
+
+<body>
+
+    <header class="headergeral">
+
+        <div class="container text-center">
+            <div class="row">
+
+                <div class="col">
+                    <ul class="linksheader">
+                        <li id="linknord"><a id="linkheader" href="homepage.html">Home</a></li>
+                        <li id="linknord"><a id="linkheader" href="sobrenos.html">Sobre Nós</a></li>
+                        <li id="linknord"><a id="linkheader" href="objetivo.html">Objetivo</a></li>
+                        <li id="linknord"><a id="linkheader" href="ongs.html">ONGS</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <figure class="logoheader">
+                        <img src="../assets/shortlogocharitycloset.png" id="logoheader">
+                    </figure>
+                </div>
+
+                <div class="col">
+                    <div class="barradepesquisa">
+                        <input type="text" placeholder="Pesquisar" id="buscarheader">
+                        <button type="submit" id="botaoenviarheader">
+                            <img id="buscaricon" src="../assets/buscaricon.png">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="loginheader">
+                        <a id="loginbuttonheader" href="login.html">Entrar</a>
+                        <a id="loginbuttonheader" href="cadastrochoice.html">Registrar</a>
+                        <a id="configheader">
+                            <img id="configicon" src="../assets/configicon.png">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="login-main">
+
+        <div class="coracaocad">
+            <figure class="coracaofigure">
+                <img id="coracao" src="../assets/shortlogocharitycloset.png">
+            </figure>
+        </div>
+
+        <section class="login-section">
+
+            <div class="titulo-login">
+                <h1 id="title-titulo-login">
+                    charity closet
+                </h1>
+                <h2>
+                    Login
+                </h2>
+            </div>
+
+            <form class="login-form">
+
+                <div class="inputs">
+
+                    <label id="label">
+                        <h3 id="h3-form">
+                            Email
+                        </h3>
+                        <input type="email" id="input" name="email" placeholder="Digite seu email" maxlength="120"
+                            required>
+                    </label>
+
+                    <label id="label">
+                        <h3 id="h3-form">
+                            Senha
+                        </h3>
+                        <input type="password" id="input" name="senha" placeholder="Digite sua senha" maxlength="120"
+                            required>
+
+                    </label>
+
+                </div>
+
+                <button id="botao-form" type="submit" onclick="redirecionarlogin()">Entrar</button>
+
+            </form>
+
+            <button id="redirecionar" onclick="redirecionar()">Cadastre-se</button>
+
+        </section>
+
+        <div style="height:50px;background-color: #181818;">
+        </div>
+
+    </main>
+
+    <footer class="footergeral">
+
+        <section class="footercontent">
+
+            <figure class="logofooter">
+                <img id="logofooter" src="../assets/shortlogocharitycloset.png">
+                <h1 id="text-logo-footer">
+                    charity closet.
+                </h1>
+            </figure>
+
+            <div class="footerpart2">
+                <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
+                <a id="link-footer-pt2" href="contato.html">Contato</a>
+            </div>
+
+            <div class="footerpart3">
+                <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
+                <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
+                <a id="link-footer-pt3" href="contato.html">FAQ</a>
+            </div>
+
+            <div class="divisaodofooter2">
+                <div class="origemdotrabalho">
+                    <div class="integrantesdiv">
+                        <h2 id="itensfooter2">Integrantes:
+                            <li id="itemfooter">02 Cauã Santana</li>
+                            <li id="itemfooter">07 Gustavo Alves</li>
+                            <li id="itemfooter">08 Gustavo Gomes</li>
+                            <li id="itemfooter">09 Izabella Oliveira</li>
+                            <li id="itemfooter">14 Leandro Afonso Niches</li>
+                            <li id="itemfooter">24 Natalia Lima </li>
+                            <li id="itemfooter">33 Wellington Cavalcante </li>
+                        </h2>
+                    </div>
+                    <div class="profediscfooter">
+                        <h2 id="itensfooter2">ITB - FIEB
+                            <li id="itemfooter">Brasílio Flores de Azevedo</li>
+                        </h2>
+                        <h2 id="itensfooter2">Curso
+                            <li id="itemfooter">Informática 2022 - 2024</li>
+                        </h2>
+                    </div>
+                </div>
+
+        </section>
+
+    </footer>
+
+</body>
+
+</html>
