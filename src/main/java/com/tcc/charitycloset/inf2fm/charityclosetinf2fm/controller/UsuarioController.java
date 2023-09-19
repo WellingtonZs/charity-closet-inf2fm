@@ -13,7 +13,7 @@ public class UsuarioController {
 		
 		
 		
-		return "form_cadastro/form-doador";
+		return "html/cadastroong";
 	}
 
 }
