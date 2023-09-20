@@ -1,0 +1,54 @@
+.principal {
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    border-right:2px solid #8224fe;
+    border-left: 2px solid #8224fe;
+    border-top: 2px solid #8224fe;
+    
+}
+
+.container__caixa {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    
+}
+
+.background_ong {
+    height: 200px;
+    width: 600px;
+    border-radius: 50%;
+}
+
+.roundimg {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 1px 1px 10px 10px  white;
+    margin-left: 18rem;
+    margin-top: -5rem;
+}
+
+.btn__editar {
+    margin-left: 18rem;
+    border-radius: 15px ;
+    background-color: #fff;
+    border: 2px solid#a8a7a7;
+    transition: 0.2s;
+}
+
+.btn__editar:hover {
+    background-color: beige;
+    transform: scale(1.1);
+}
+
+.nome__perfil {
+    margin-left: 17rem;
+}
+
+.descricao__perfil {
+    margin-left: 19em;
+}
