@@ -8,20 +8,22 @@
     background-image: url(../assets/background1homepage.png);
     background-size: cover;
     background-position: fixed;
+    padding-top: 50px;
 }
 
 #titulo1-1{
-    color: var(--roxo-destaque);
+    color:#fff;
     text-align: center;
     padding-top: 5%;
     font-size: 50px;
+    letter-spacing: 8px;
 }
 
 #text-doe{
     color: var(--titulo-homepage);
     text-align: center;
     padding-top: 1%;
-    font-size: 70px;
+    font-size: 50px;
 }
 
 #desc-doe{
@@ -35,7 +37,7 @@
 }
 
 #link-doe{
-    background-color:var(--roxo-destaque) ;
+    background: linear-gradient(to right, #707bff, #fa52ff);
     color: var(--titulo-homepage);
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -49,6 +51,7 @@
 }
 
 #link-doe:hover{
+    background: linear-gradient(to left, #707bff, #fa52ff);
     color:#fff;
     transition-duration: 0.8s;
 }
@@ -60,16 +63,16 @@
 }
 
 .oddshome{
-    background-color: #212121;
+    background-color: #181818;
     display:flex;
     margin-top: -10px;
-    padding-top: 100px;
+    padding-top: 150px;
     padding-left: 30px;
     padding-bottom: 100px;
 }
 
 #roupahome{
-    width: 720px;
+    width: 630px;
     padding:20px;
     padding-right: 20px;
     border-radius: 50px;
@@ -129,4 +132,13 @@ details{
     margin-left: 20%;
     margin-right: 20%;
     padding-top: 30px;
+}
+
+.div-gradiente-home{
+    background: linear-gradient(to right, #707bff, #fa52ff);
+    width: 100%;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: 0;
+    box-shadow: 10px 10px 61px 10px #8224fe;
 }

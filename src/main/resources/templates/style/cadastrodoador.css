@@ -1,4 +1,5 @@
-.cadastroong {
+
+.cadastrodoador {
     background-color: #181818;
     margin: 0;
     text-align: center;
@@ -75,7 +76,7 @@
     margin-left: 60px;
 }
 
-#cnpj {
+#cpf {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
@@ -166,3 +167,4 @@
     transition-duration: 0.5s;
     transform: scale(1.1);
 }
+
