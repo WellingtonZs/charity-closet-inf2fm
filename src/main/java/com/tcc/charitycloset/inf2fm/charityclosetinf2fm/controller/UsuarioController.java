@@ -13,7 +13,7 @@ public class UsuarioController {
 		
 		
 		
-		return "html/cadastroong";
+		return "html/cadastrodoador";
 	}
 
 }
