@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Usuarios")
-public class Usuario {
+public class UsuarioDoador {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,6 @@ public class Usuario {
 	private String senha;
 	private String biografia; 
 	private String cpf;
-	private String cnpj;
 	
 	
 	public Long getId() {
@@ -107,12 +106,6 @@ public class Usuario {
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
-	}
-	public String getCnpj() {
-		return cnpj;
-	}
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
 	}
 	
 }
