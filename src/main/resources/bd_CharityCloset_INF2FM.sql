@@ -31,6 +31,23 @@ CREATE TABLE Usuario
 	biografia		VARCHAR(200)	NOT NULL,
 )
 
+--ONG:
+CREATE TABLE ONG
+(
+	id				BIGINT			NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	nome			VARCHAR(100)	NOT NULL,
+	email			VARCHAR(100)	UNIQUE	NOT NULL,
+	senha			VARCHAR(100)	NOT NULL,
+	telefone		VARCHAR(20)		NOT NULL,
+	nivelAcesso		VARCHAR(10)		NULL, --ADMIN ou USER
+	foto			VARBINARY(MAX)	NULL,
+	cep				CHAR(7)			NOT NULL,
+	dataCadastro	DATETIME		NOT NULL,
+	sobreNos		VARCHAR(200)	NOT NULL,
+	uf				CHAR(2)			NOT NULL,
+	cnpj			VARCHAR(14)		NOT NULL,
+)
+
 --Administrador:
 CREATE TABLE Administrador
 (
@@ -47,7 +64,6 @@ CREATE TABLE Administrador
 	telefone		VARCHAR(20)		NOT NULL,
 	nivelAcesso		VARCHAR(10)		NULL, --ADMIN ou USER
 )
---editar fks
 
 --ConfiguracoesGerais:
 CREATE TABLE ConfiguracoesGerais
@@ -74,23 +90,6 @@ CREATE TABLE Avaliacao
 	usuario_id		BIGINT			NOT NULL,
 	
 	FOREIGN KEY	(usuario_id) REFERENCES Usuario(id)
-)
-
---ONG:
-CREATE TABLE ONG
-(
-	id				BIGINT			NOT NULL IDENTITY(1,1) PRIMARY KEY,
-	nome			VARCHAR(100)	NOT NULL,
-	email			VARCHAR(100)	UNIQUE	NOT NULL,
-	senha			VARCHAR(100)	NOT NULL,
-	telefone		VARCHAR(20)		NOT NULL,
-	nivelAcesso		VARCHAR(10)		NULL, --ADMIN ou USER
-	foto			VARBINARY(MAX)	NULL,
-	cep				CHAR(7)			NOT NULL,
-	dataCadastro	DATETIME		NOT NULL,
-	sobreNos		VARCHAR(200)	NOT NULL,
-	uf				CHAR(2)			NOT NULL,
-	cnpj			VARCHAR(14)		NOT NULL,
 )
 
 --CategoriaRoupas:
