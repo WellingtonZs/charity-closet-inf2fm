@@ -44,6 +44,7 @@ CREATE TABLE ONG
 	cep				CHAR(7)			NOT NULL,
 	dataCadastro	DATETIME		NOT NULL,
 	sobreNos		VARCHAR(200)	NOT NULL,
+	descAtuacao		VARCHAR(200)	NOT NULL,
 	uf				CHAR(2)			NOT NULL,
 	cnpj			VARCHAR(14)		NOT NULL,
 )
@@ -145,8 +146,8 @@ INSERT INTO [dbo].[Usuario](nome, sobrenome, email, senha, telefone, nivelAcesso
 VALUES ('zezo', 'lindo', 'zezo@zezo.com', '123', '11952303304', 'ADMIN', null, '12332112323', '2021-01-08T00:00:00', '1231233','SP','2000-10-05T00:00:00','aaaa', 'eu sou o zezo e sou lindo')
 
 --ONG:
-INSERT INTO ONG (nome, email, senha, telefone, nivelAcesso, foto, cep, dataCadastro, sobreNos, uf, cnpj) 
-VALUES ('zezo', 'aaa@aaa.com', '111', '11952303304','USER', null, '1231234', '2021-01-08T00:00:00', 'aaaa', 'rj', '11111111111111')
+INSERT INTO ONG (nome, email, senha, telefone, nivelAcesso, foto, cep, dataCadastro, sobreNos, descAtuacao, uf, cnpj) 
+VALUES ('zezo', 'aaa@aaa.com', '111', '11952303304','USER', null, '1231234', '2021-01-08T00:00:00', 'aaaa', 'aaaaab','rj', '11111111111111')
 
 --Administrador:
 INSERT INTO Administrador (cpf, email, nome, sobrenome, senha, uf, dataNasc, cep, dataCadastro, telefone, nivelAcesso) 
@@ -197,6 +198,26 @@ SELECT * FROM AprovacaoONG
 --ReprovaçãoONG
 SELECT * FROM ReprovacaoONG
 
+--Drop das tabelas
+
+--ConfiguraçõesGerais:
+DROP TABLE ConfiguracoesGerais
+--Avaliacao
+DROP TABLE Avaliacao
+--Usuário
+DROP TABLE Usuario
+--ONG
+DROP TABLE ONG
+--Administrador
+DROP TABLE Administrador
+--CategoriaRoupas
+DROP TABLE CategoriaRoupas
+--ContatoSuporte
+DROP TABLE ContatoSuporte
+--AprovaçãoONG
+DROP TABLE AprovacaoONG
+--ReprovaçãoONG
+DROP TABLE ReprovacaoONG
 
 
 
