@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script/login.js"></script>
     <script type="text/javascript" src="script/headerbotaohref.js"></script>
-    <link href="style/login.css" rel="stylesheet">
+    <link href="style/loginadm.css" rel="stylesheet">
     <link href="style/header.css" rel="stylesheet">
     <link href="style/footer.css" rel="stylesheet">
     <link href="style/reset.css" rel="stylesheet">
@@ -15,61 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Login | Charity Closet</title>
+    <title>Login ADM | Charity Closet</title>
 </head>
 
 <body>
 
-    <header class="cabecalho">
-        <nav class="nav__bar">
-         <div class="logo">
-             <img src="assets/shortlogocharitycloset.png" style="width: 50px;" alt="">
-         </div>
-    
-         <div class="nav__list">
-             <ul>
-                 <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                 <li class="nav__item"><a href="ongs.html" class="nav__link">ONGS</a></li>
-                 <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
-                 <li class="nav__item"><a href="contato.html" class="nav__link">Contato</a></li>
-                 
-                 <div class="buscar">
-                  <input class="nav__item" type="search" name="" id="pesquisa"  >
-                  <button class="icon__buscar">
-                  <i class="fa-solid fa-magnifying-glass" style="color: #8a2be2;"></i>
-                </button>
-                </div>
-                </ul>
-              
-         </div>
-    
-         <div class="login__button">
-             <a href="login.html" id="loginbuttonheader">Entrar</a>
-             <div>
-             <a href="">
-             <img src="assets/configicon.png" alt="" id="configicon" >
-            </div>
-            </a>
-    
-         </div>
-    
-         <div class="mobile__menu__icon">
-             <button onclick="menushow()"><img class="icon" src="assets/Menu.svg" alt=""></button>
-         </div>
-        </nav>
-    
-        <div class="mobile__menu">
-         <ul>
-             <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                 <li class="nav__item"><a href="ongs.html" class="nav__link">ONGS</a></li>
-                 <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
-         </ul>
-    
-         <div class="login__button">
-             <button><a href="login.html">Entrar</a></button>
-         </div>
-        </div>
-      </header>
     
 
     <main class="login-main">
@@ -87,7 +37,7 @@
                     charity closet
                 </h1>
                 <h2>
-                    Login
+                    Login para Administradores
                 </h2>
             </div>
 
@@ -114,13 +64,11 @@
 
                 </div>
 
-                <button id="botao-form" type="submit" onclick="redirecionarlogin()">Entrar</button>
+                <a id="botao-form" href="usersadm.html">Entrar</a>
 
             </form>
 
-            <a id="redirecionar" href="cadastroong.html">Cadastre-se</a><br>
-
-            <a href="verificacao.html">esqueci a senha</a>
+            
 
         </section>
 

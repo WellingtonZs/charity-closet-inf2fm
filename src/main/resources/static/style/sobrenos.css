@@ -18,7 +18,7 @@ body {
 }
 
 .container__principal {
-    background-image: url(../assets/fundo_sobre_nos.webp);
+    background-image: url(assets/fundo_sobre_nos.webp);
     background-size: cover;
     padding: 21%;
     text-align: center;

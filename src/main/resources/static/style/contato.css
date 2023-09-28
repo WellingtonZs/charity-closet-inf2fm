@@ -1,5 +1,4 @@
-
-.cadastrodoador {
+.contato {
     background-color: #181818;
     margin: 0;
     text-align: center;
@@ -50,11 +49,40 @@
 #input {
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 10px;
+    width: 100%;
     border-color: #8224fe;
     background-color: #fff;
     color: #8224fe;
     font-weight: 600;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent
+}
+
+#input2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 140%;
+    border-color: #8224fe;
+    background-color: #fff;
+    color: #8224fe;
+    font-weight: 600;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent
+}
+
+#input3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 140%;
+    border-color: #8224fe;
+    background-color: #fff;
+    color: #8224fe;
+    font-weight: 600;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent
 }
 
 #label {
@@ -63,7 +91,6 @@
 
 .form-1 {
     display: grid;
-    border-right: #8224fe;
     border-left: #fff;
     border-top: #fff;
     border-bottom: #fff;
@@ -74,9 +101,19 @@
 
 .form-2 {
     margin-left: 60px;
+    display: flex;
+    gap: 10rem;
+    margin: 0;
 }
 
-#cpf {
+.form-3 {
+    margin-left: 60px;
+    display: flex;
+    gap: 10rem;
+    margin: 0;
+}
+
+#cnpj {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
@@ -124,7 +161,13 @@
     margin-top: 20px;
 }
 
-#botao-form {
+.btn-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-form {
     background: linear-gradient(to right, #707cff 5%, #f952ff 100%);
     background-color: #707cff;
     border-radius: 16px;
@@ -138,7 +181,7 @@
     margin-top: 40px;
 }
 
-#botao-form:hover {
+.botao-form:hover {
     background: linear-gradient(to right, #f952ff 5%, #707cff 100%);
     background-color: #f952ff;
     transition-duration: 0.5s;
@@ -167,4 +210,3 @@
     transition-duration: 0.5s;
     transform: scale(1.1);
 }
-

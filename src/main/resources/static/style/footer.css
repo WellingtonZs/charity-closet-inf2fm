@@ -139,3 +139,18 @@
     color: #b1b1b1;
     margin-top: 5px;
 }
+
+#intranet{
+    background-image: linear-gradient(to left, #707bff, #fa52ff);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+#intranet:hover{
+    background-image: linear-gradient(to right, #707bff, #fa52ff);
+    transform: scale(1.1);
+    text-decoration: underline;
+    text-decoration-color:#b1b1b1;
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script/login.js"></script>
+    <script type="text/javascript" src="script/headerbotaohref.js"></script>
+    <link href="style/usersadm.css" rel="stylesheet">
+    <link href="style/header.css" rel="stylesheet">
+    <link href="style/footer.css" rel="stylesheet">
+    <link href="style/reset.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Login ADM | Charity Closet</title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <nav class="nav__bar">
+            <div class="logo">
+                <img src="assets/shortlogocharitycloset.png" style="width: 50px;" alt="">
+            </div>
+
+            <div class="nav__list">
+                <ul>
+                    <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="ongs.html" class="nav__link">Users</a></li>
+                    <li class="nav__item"><a href="sobrenos.html" class="nav__link1">a</a></li>
+
+                    <div class="buscar">
+                        <input class="nav__item" type="search" name="" id="pesquisa">
+                        <button class="icon__buscar">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #8a2be2;"></i>
+                        </button>
+                    </div>
+                </ul>
+
+            </div>
+
+            <div class="login__button">
+                <a href="homepage.html" id="loginbuttonheader">Sair</a>
+                <div>
+                    <a href="">
+                        <img src="assets/configicon.png" alt="" id="configicon">
+                </div>
+                </a>
+
+            </div>
+
+            <div class="mobile__menu__icon">
+                <button onclick="menushow()"><img class="icon" src="assets/Menu.svg" alt=""></button>
+            </div>
+        </nav>
+
+        <div class="mobile__menu">
+            <ul>
+                <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="ongs.html" class="nav__link">Users</a></li>
+                <li class="nav__item"><a href="sobrenos.html" class="nav__link1">ONGS</a></li>
+            </ul>
+
+            <div class="login__button">
+                <button><a href="login.html">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-users">
+
+        <h1 id="title-main">Gerenciamento de Usuários</h1>
+
+        <section class="conteudo">
+
+            <div class="icons">
+                <figure class="icons-figure">
+                    <img id="icon-img" src="assets/usericon.png"style="border-style: double; border-width: 5px;">
+                    <h3 id="title-icon" > ONG</h3>
+                </figure>
+                <figure class="icons-figure">
+                    <img id="icon-img" src="assets/usericon.png">
+                    <h3 id="title-icon"> Doador</h3>
+                </figure>
+                <figure class="icons-figure">
+                    <img id="icon-img" src="assets/usericon.png">
+                    <h3 id="title-icon"> ADM</h3>
+                </figure>
+            </div>
+
+            <div class="gerenciamento">
+
+                <table class="demo">
+                    <thead>
+                    <tr>
+                        <th>ONG</th>
+                        <th>Representante</th>
+                        <th>E-mail Rep</th>
+                        <th>Senha</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>&nbsp;LIFEOFPABLO</td>
+                        <td>&nbsp;CAUÃ</td>
+                        <td>&nbsp;C@HORSE.COM</td>
+                        <td>&nbsp;FREDDIEMERCURY</td>
+                        <td>&nbsp;<select>
+                            <option>APROVADO</option>
+                            <option>BANIDO</option>
+                            <option>ANALISE</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;GRADUATION</td>
+                        <td>&nbsp;GUSTAVO</td>
+                        <td>&nbsp;G@HORSE.COM</td>
+                        <td>&nbsp;AMYWINEHOUSE</td>
+                        <td>&nbsp;<select>
+                            <option>APROVADO</option>
+                            <option>BANIDO</option>
+                            <option>ANALISE</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;DONDA</td>
+                        <td>&nbsp;IZABELLA</td>
+                        <td>&nbsp;I@HORSE.COM</td>
+                        <td>&nbsp;MICHAELJACKSON</td>
+                        <td>&nbsp;<select>
+                            <option>APROVADO</option>
+                            <option>BANIDO</option>
+                            <option>ANALISE</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;YEEZUS</td>
+                        <td>&nbsp;LEANDRO</td>
+                        <td>&nbsp;L@HORSE.COM</td>
+                        <td>&nbsp;FRANKSINATRA</td>
+                        <td>&nbsp;<select>
+                            <option>APROVADO</option>
+                            <option>BANIDO</option>
+                            <option>ANALISE</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;YE</td>
+                        <td>&nbsp;NATHALIA</td>
+                        <td>&nbsp;N@HORSE.COM</td>
+                        <td>&nbsp;OZZYOSBOURNE</td>
+                        <td>&nbsp;<select>
+                            <option>APROVADO</option>
+                            <option>BANIDO</option>
+                            <option>ANALISE</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;WATCHTHRONE</td>
+                        <td>&nbsp;WELLINGTON</td>
+                        <td>&nbsp;W@HORSE.COM</td>
+                        <td>&nbsp;JOHNLENNON</td>
+                        <td>&nbsp;<select>
+                            <option>APROVADO</option>
+                            <option>BANIDO</option>
+                            <option>ANALISE</option>
+                        </select></td>
+                    </tr>
+                    <tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <div style="width: 100%; height: 30px; background-color: #181818;"></div>
+
+    </main>
+
+    <footer class="footergeral">
+
+        <section class="footercontent">
+
+            <figure class="logofooter">
+                <img id="logofooter" src="assets/shortlogocharitycloset.png">
+                <h1 id="text-logo-footer">
+                    charity closet.
+                </h1>
+            </figure>
+
+            <div class="footerpart2">
+                <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
+                <a id="link-footer-pt2" href="contato.html">Contato</a>
+            </div>
+
+            <div class="footerpart3">
+                <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
+                <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
+                <a id="link-footer-pt3" href="contato.html">FAQ</a>
+            </div>
+
+            <div class="divisaodofooter2">
+                <div class="origemdotrabalho">
+                    <div class="integrantesdiv">
+                        <h2 id="itensfooter2">Integrantes:
+                            <li id="itemfooter">02 Cauã Santana</li>
+                            <li id="itemfooter">07 Gustavo Alves</li>
+                            <li id="itemfooter">08 Gustavo Gomes</li>
+                            <li id="itemfooter">09 Izabella Oliveira</li>
+                            <li id="itemfooter">14 Leandro Afonso Niches</li>
+                            <li id="itemfooter">24 Natalia Lima </li>
+                            <li id="itemfooter">33 Wellington Cavalcante </li>
+                        </h2>
+                    </div>
+                    <div class="profediscfooter">
+                        <h2 id="itensfooter2">ITB - FIEB
+                            <li id="itemfooter">Brasílio Flores de Azevedo</li>
+                        </h2>
+                        <h2 id="itensfooter2">Curso
+                            <li id="itemfooter">Informática 2022 - 2024</li>
+                        </h2>
+                    </div>
+                </div>
+
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

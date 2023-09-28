@@ -1,92 +1,113 @@
-.headergeral{
+
+.cabecalho {
     background-color: black;
-    color:#fff;
-    height: 55px;
+    box-shadow: 0px 3px 10px rgba(22, 22, 22, 0.541);
+    height: 60px;
     position: fixed;
     width: 100%;
     z-index: 999;
 }
 
-#logoheader{
-    width: 50px;
-    margin-top: 3px;
-}
 
-.linksheader{
+.nav__bar{
     display: flex;
+    justify-content: space-between;
+    padding: 0rem 6rem;
+    align-items: center;
+} 
+
+.logo{
+    display: flex;
+    align-items: center;
 }
 
-#linkheader{
-    margin-inline: 10px;
+.nav__list{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.nav__list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 5rem;
+}
+
+.nav__item {
+    margin: 0 15px;
+
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: 1.15ren;
+    color: #fff;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.nav__link1{
+    opacity: 0;
+}
+
+.nav__link:hover {
+color: #8224fe;
+transition-duration: 1s;
+text-decoration: underline;
+text-underline-offset: 10px;
+}
+
+.login__button  {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.login__button button a {
     text-decoration: none;
     color: #fff;
-    white-space: nowrap;
-    font-size: 16px;
-    line-height: 55px;
+    font-weight: 500;
 }
 
-#linkheader:hover{
-    color: #8224fe;
-    transition-duration: 1s;
-    text-decoration: underline;
-    text-underline-offset: 10px;
+.mobile__menu__icon {
+    display: none;
 }
 
-#linknord{
-    list-style-type: none;
+.mobile__menu {
+    display: none;
 }
 
-.barradepesquisa{
-    border-color: #8224fe;
-    display: flex;
-    border-radius: 10px;
-    width: 230px;
-    height: 30px;
-    border-style: solid;
-    border-width: 2px;
-    margin-top: 10px;
-    padding: 2px;
+#pesquisa {
+border-radius: 1.5rem;
+border: none;
+margin: 0;
+box-sizing: border-box;
+   
 }
 
-#buscarheader{
-    background:none ;
+.buscar {
+    background-color: #fff;
+    width: 40%;
+    height: 25%;
+    border-radius: 1.5rem;
+    
+}
+
+.icon__buscar {
+    background: transparent;
     border: none;
-    color: #fff;
-    width: 100%;
-    margin-top: -4px;
-    padding-left: 5px;
-    height: 30px;
-}
-
-#buscarheader:focus{
-    box-shadow: 0 0 0 0;
-    outline: 0;
-}
-
-#buscaricon{
-    filter: invert(18%) sepia(82%) saturate(6310%) hue-rotate(266deg) brightness(101%) contrast(99%);
-    width: 20px;
-    margin-top: -9px;
-}
-
-#buscaricon:hover{
-    filter: invert(100%);
-    transition-duration:0.3s ;
-}
-
-#botaoenviarheader{
-    background: none;
-    border: none;
+    ;
 }
 
 #loginbuttonheader{
-    margin-inline: 10px;
     text-decoration: none;
     color: #fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
     white-space: nowrap;
     font-size: 16px;
     line-height: 55px;
+    margin-left: 2em;
 }
 
 #loginbuttonheader:hover{
@@ -96,7 +117,13 @@
     text-underline-offset: 10px;
 }
 
-#configicon{
+#btn__login{
+    border-radius: 1.5rem;
+    width: 50%;
+    height: 25%;
+}
+
+#configicon {
     filter: invert(18%) sepia(82%) saturate(6310%) hue-rotate(266deg) brightness(101%) contrast(99%);
     width: 20px;
     margin-left: 30px;
@@ -107,3 +134,49 @@
     transition-duration:0.3s ;
 }
 
+@media screen  and (max-width: 730px) {
+    .nav__bar {
+        padding: 1.5rem 4rem;
+    }
+    .buscar .icon__buscar{
+        display: none;
+    }
+    .nav__item {
+        display: none;
+    }
+
+    .login__button {
+        display: none;
+    }
+
+    .mobile__menu__icon {
+        display: block;
+    }
+
+    .mobile__menu__icon button  {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile__menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile__menu .nav__item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile__menu .login__buttom {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile__menu .login__buttom button {
+        width: 100%;
+    }
+}

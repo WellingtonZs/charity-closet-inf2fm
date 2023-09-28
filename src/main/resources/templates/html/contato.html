@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="script/headerbotaohref.js"></script>
-  <link href="style/homepage.css" rel="stylesheet">
+  <script src="script/cpf.js"></script>
+  <link href="style/contato.css" rel="stylesheet">
   <link href="style/header.css" rel="stylesheet">
   <link href="style/footer.css" rel="stylesheet">
   <link href="style/reset.css" rel="stylesheet">
@@ -72,87 +73,105 @@
     
   </header>
 
-  <main class="mainhome">
-    <section class="parte1home">
-      <div class="titulo1home">
-        <h1 id="titulo1-1">
-          Charity Closet
-        </h1>
-      </div>
-      <div class="teste">
-        <div class="doeaquihome">
-          <h1 id="text-doe">
-            Doe roupas hoje!
-          </h1>
-          <h3 id="desc-doe">
-            Faça a diferença na vida de alguém doando para o nosso closet da solidariedade. Sua contribuição pode
-            proporcionar calor e conforto.
-          </h3>
-          <h1 id="link-button-doe">
-            <a href="ongs.html" id="link-doe">Encontre uma ONG</a>
-          </h1>
-        </div>
-      </div>
+  <main class="contato">
+
+    <div class="coracaocad">
+        <figure class="coracaofigure">
+            <img id="coracao" src="assets/shortlogocharitycloset.png">
+        </figure>
+    </div>
+
+    <section class="formulario-section">
+
+        <form class="form">
+
+            <div class="desc-form">
+
+                <h1 id="desc-h1">
+                    charity closet
+                </h1>
+                <h2 id="title-form">
+                    Formulário para Contato
+                </h2>
+
+            </div>
+
+            <section class="inputs-form">
+
+                <div class="form-1">
+
+                    <label id="label">
+                        <h1 id="nome-input">
+                            MOTIVO DO CONTATO:
+                        </h1>
+                        <input id="input" type="text" name="nome_ong" maxlength="400"
+                            placeholder="Digite motivo de contato" required>
+                    </label>
+                    <label id="label">
+                        <h1 id="nome-input">
+                            SUA PERGUNTA
+                        </h1>
+                        <input id="input" type="text" name="nome_ong" maxlength="400"
+                            placeholder="Faça sua pergunta" required>
+                    </label>
+
+                    <div class="form-2">
+                        <label id="label">
+                            <h1 id="nome-input">
+                                NOME:
+                            </h1>
+                            <input id="input2" type="text" name="nome_ong" maxlength="40"
+                                placeholder="Digite seu nome" required>
+                        </label>
+    
+                        <label id="label">
+                            <h1 id="nome-input">
+                                SOBRENOME:
+                            </h1>
+                            <input id="input2" type="text" name="nome_ong" maxlength="40"
+                                placeholder="Digite seu sobrenome" required>
+                        </label>
+                    </div>
+
+                    <label id="label">
+                        <h1 id="nome-input">
+                            ENDEREÇO DE E-MAIL:
+                        </h1>
+                        <input id="input" type="email" name="nome_ong" maxlength="100"
+                            placeholder="Digite seu email" required>
+                    </label>
+
+                   <div class="form-3">
+                    <label id="label">
+                        <h1 id="nome-input">
+                            CPF:
+                        </h1>
+                        <input id="input3" type="text" name="cpf" maxlength="11"
+                            placeholder="Digite seu cpf" required>
+                    </label>
+
+                    <label id="label">
+                        <h1 id="nome-input">
+                            Número de celular
+                        </h1>
+                        <input type="tel" id="input3" name="celular" placeholder="(XX) XXXXX-XXXX"
+                            pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required>
+                    </label>
+                   </div>
+                </div>
+                
+            </section>
+
+           <div class="btn-form">
+            <button class="botao-form" onclick="TestarCPF(strCPF)">Enviar</button>
+           </div>
+
+        </form>
+
     </section>
 
-    <div class="div-gradiente-home"></div>
 
-    <section class="oddshome">
-      <img src="assets/roupashome.png" id="roupahome">
-      <h1 id="title-odds">
-        O projeto Charity Closet, uma inovadora aplicação desenvolvida para promover a conexão entre organizações
-        não-governamentais (ONGs) e potenciais doadores de roupas, abraça os princípios fundamentais das Metas de
-        Desenvolvimento Sustentável (ODS) estabelecidas pela ONU para 2030. Ao facilitar a doação de roupas e sua
-        redistribuição para indivíduos em situação de vulnerabilidade, o projeto toca em várias ODS, promovendo um
-        impacto social e ambiental significativo.
-      </h1>
-    </section>
-
-    <section class="onu">
-      <div class="odslogos">
-        <img src="assets/ods1.png" id="logoods">
-        <img src="assets/ods10.png" id="logoods">
-        <img src="assets/ods12.png" id="logoods">
-        <img src="assets/ods17.png" id="logoods">
-      </div>
-      <div class="desc-ods">
-        <details>
-          <h2 id="text-desc-ods">
-            ODS 1: Erradicação da Pobreza - O projeto se alinha diretamente com a ODS 1, pois visa ajudar as pessoas
-            carentes ao fornecer-lhes roupas que podem melhorar sua qualidade de vida e autoestima. Ao ligar doadores a
-            ONGs, o Charity Closet contribui para aliviar a pobreza e reduzir as disparidades socioeconômicas.
-          </h2>
-          <hr>
-          <h2 id="text-desc-ods">
-            ODS 10: Redução das Desigualdades - Ao enfocar a doação de roupas para pessoas necessitadas, o projeto
-            aborda a ODS 10, buscando diminuir as desigualdades sociais. Isso é especialmente relevante em um contexto
-            em que o acesso a itens básicos, como roupas, pode ser desigual entre diferentes grupos.
-          </h2>
-          <hr>
-          <h2 id="text-desc-ods">
-            ODS 12: Consumo e Produção Sustentáveis - O Charity Closet também está alinhado com a ODS 12, uma vez que
-            promove a reutilização e a recirculação de roupas, reduzindo o desperdício e a pressão sobre os recursos
-            naturais. A doação de roupas usadas incentiva um modelo mais sustentável de consumo.
-          </h2>
-          <hr>
-          <h2 id="text-desc-ods">ODS 17: Parcerias e Meios de Implementação - A ODS 17 é central para o projeto, pois
-            destaca a importância da construção de parcerias entre diferentes setores da sociedade para alcançar as
-            metas de desenvolvimento.</h2>
-      </div>
-      </details>
-    </section>
-
-    <section class="avaliacao">
-      <h1 id="text-avaliacao">
-        Charity Closet é um incrível site de <br>doações nacional! Eles proporcionam um<br> ambiente caloroso e
-        acolhedor, facilitando a<br> doação e a ajuda aos necessitados. Obrigado <br>por fazer a diferença em nossa
-        comunidade!
-      </h1>
-      <h3 id="nome-doador">
-        - Bruno Monteiro Aiub
-      </h3>
-    </section>
-  </main>
+</main>
 
   <footer class="footergeral">
 
