@@ -1,6 +1,6 @@
 package com.tcc.charitycloset.inf2fm.charityclosetinf2fm.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Usuarios")
-public class UsuarioDoador {
+public class UsuarioOng {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,14 +19,15 @@ public class UsuarioDoador {
 	private String telefone;
 	private String nome;
 	private String sobrenome;
-	private LocalDateTime dataCadastro;
-	private LocalDateTime dataNascimento;
+	private LocalDate dataCadastro;
 	private String uf;
 	private String cep;
 	private String email;
 	private String senha;
+	private String confirmacaoSenha;
 	private String biografia; 
-	private String cpf;
+	private String cnpj;
+	private String descAtuacao;
 	
 	
 	public Long getId() {
@@ -59,17 +60,11 @@ public class UsuarioDoador {
 	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
 	}
-	public LocalDateTime getDataCadastro() {
+	public LocalDate getDataCadastro() {
 		return dataCadastro;
 	}
-	public void setDataCadastro(LocalDateTime dataCadastro) {
+	public void setDataCadastro(LocalDate dataCadastro) {
 		this.dataCadastro = dataCadastro;
-	}
-	public LocalDateTime getDataNascimento() {
-		return dataNascimento;
-	}
-	public void setDataNascimento(LocalDateTime dataNascimento) {
-		this.dataNascimento = dataNascimento;
 	}
 	public String getUf() {
 		return uf;
@@ -95,17 +90,29 @@ public class UsuarioDoador {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	public String getConfirmacaoSenha() {
+		return confirmacaoSenha;
+	}
+	public void setConfirmacaoSenha(String confirmacaoSenha) {
+		this.confirmacaoSenha = confirmacaoSenha;
+	}
 	public String getBiografia() {
 		return biografia;
 	}
 	public void setBiografia(String biografia) {
 		this.biografia = biografia;
 	}
-	public String getCpf() {
-		return cpf;
+	public String getCnpj() {
+		return cnpj;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	public String getDescAtuação() {
+		return descAtuacao;
+	}
+	public void setDescAtuação(String descAtuacao) {
+		this.descAtuacao = descAtuacao;
 	}
 	
 }
