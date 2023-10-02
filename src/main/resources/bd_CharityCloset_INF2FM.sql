@@ -36,6 +36,7 @@ CREATE TABLE ONG
 (
 	id				BIGINT			NOT NULL IDENTITY(1,1) PRIMARY KEY,
 	nome			VARCHAR(100)	NOT NULL,
+	nomerep			VARCHAR(100)	NOT NULL,
 	email			VARCHAR(100)	UNIQUE	NOT NULL,
 	senha			VARCHAR(100)	NOT NULL,
 	telefone		VARCHAR(20)		NOT NULL,
@@ -146,8 +147,8 @@ INSERT INTO [dbo].[Usuario](nome, sobrenome, email, senha, telefone, nivelAcesso
 VALUES ('zezo', 'lindo', 'zezo@zezo.com', '123', '11952303304', 'ADMIN', null, '12332112323', '2021-01-08T00:00:00', '1231233','SP','2000-10-05T00:00:00','aaaa', 'eu sou o zezo e sou lindo')
 
 --ONG:
-INSERT INTO ONG (nome, email, senha, telefone, nivelAcesso, foto, cep, dataCadastro, sobreNos, descAtuacao, uf, cnpj) 
-VALUES ('zezo', 'aaa@aaa.com', '111', '11952303304','USER', null, '1231234', '2021-01-08T00:00:00', 'aaaa', 'aaaaab','rj', '11111111111111')
+INSERT INTO ONG (nome, nomerep, email, senha, telefone, nivelAcesso, foto, cep, dataCadastro, sobreNos, descAtuacao, uf, cnpj) 
+VALUES ('zezo', 'dono ong', 'aaa@aaa.com', '111', '11952303304','USER', null, '1231234', '2021-01-08T00:00:00', 'aaaa', 'aaaaab','rj', '11111111111111')
 
 --Administrador:
 INSERT INTO Administrador (cpf, email, nome, sobrenome, senha, uf, dataNasc, cep, dataCadastro, telefone, nivelAcesso) 
