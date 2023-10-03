@@ -20,7 +20,7 @@ public class UsuarioController {
 		
 		return "html/cadastroong";
 	}
-	
+		
 	@GetMapping("/login")
 	public String novoLogin() {
 		
