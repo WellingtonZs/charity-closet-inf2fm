@@ -35,6 +35,7 @@
 
 .form {
     text-align: left;
+    
 }
 
 .inputs-form {
@@ -46,7 +47,7 @@
     font-size: 20px;
 }
 
-#input {
+input {
     padding-left: 10px;
     padding-right: 10px;
     width: 100%;
@@ -59,33 +60,41 @@
     border-right: transparent
 }
 
-#input2 {
+input:focus {
+    outline: none;
+}
+
+.form-2__inputs  {
     padding-left: 10px;
     padding-right: 10px;
-    width: 140%;
+    width: 96%;
     border-color: #8224fe;
     background-color: #fff;
     color: #8224fe;
     font-weight: 600;
     border-top: transparent;
     border-left: transparent;
-    border-right: transparent
+    border-right: transparent;
+    box-sizing: border-box;
 }
 
-#input3 {
+.form-3__inputs {
     padding-left: 10px;
     padding-right: 10px;
-    width: 140%;
+    width: 96%;
     border-color: #8224fe;
     background-color: #fff;
     color: #8224fe;
     font-weight: 600;
     border-top: transparent;
     border-left: transparent;
-    border-right: transparent
+    border-right: transparent;
+    box-sizing: border-box;
 }
 
-#label {
+
+
+label {
     margin-bottom: 20px;
 }
 
@@ -97,20 +106,20 @@
     border-style: solid;
     width: 100%;
     padding-right: 30px;
+    box-sizing: border-box;
 }
 
-.form-2 {
-    margin-left: 60px;
-    display: flex;
-    gap: 10rem;
-    margin: 0;
+.form-2  {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2%;
+ 
 }
 
 .form-3 {
-    margin-left: 60px;
-    display: flex;
-    gap: 10rem;
-    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2%;
 }
 
 #cnpj {

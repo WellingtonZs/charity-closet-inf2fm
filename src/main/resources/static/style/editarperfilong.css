@@ -25,12 +25,12 @@ main {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 1px 1px 10px 10px  white;
-    margin-right: 20rem;
+    margin-right: 22rem;
     margin-top: -6rem;
 }
 
 .info{
-    margin-right: 5rem;
+    
 }
 
 .linha{
@@ -67,3 +67,21 @@ button:hover {
     height: 100%;
     background-color: rgb(0, 0, 0, 0.6);
 }
+
+input {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border-color: #8224fe;
+    background-color: #fff;
+    color: #8224fe;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1rem;
+}
+

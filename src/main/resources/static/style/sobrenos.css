@@ -2,13 +2,18 @@
 @import url(footer.css);
 
 :root {
-    --cor-de-fundo: #393E46;
+    --cor-de-fundo: #222020;
     --cor-de-fundo-secundario: #E8E3E3;
     --branco: #ffffff;
     --preto: #000000;
     --titulo-homepage:#fff;
     --roxo-destaque:#8224fe;
 
+}
+
+.principal {
+    background-color: black;
+    padding: 5%;
 }
 
 body {
@@ -18,7 +23,7 @@ body {
 }
 
 .container__principal {
-    background-image: url(assets/fundo_sobre_nos.webp);
+    background-image: url(/assets/fundo_sobre_nos.webp);
     background-size: cover;
     padding: 21%;
     text-align: center;
@@ -114,12 +119,15 @@ body {
 }
 
 .container__quarteario {
-    background: var(--cor-de-fundo)
+    background: var(--cor-de-fundo);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 3%;
 }
 
 .textos5 {
     color: var(--branco);
-    width: 50%;
+    width: 100%;
     padding: 0% 2%;
 }
 
@@ -135,3 +143,30 @@ strong {
 .efeito__texto:hover {
     transform: scale(0.9);
 }
+
+#logoods {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 20%;
+    
+}
+
+.img__ods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+}
+
+
+.div-gradiente-home{
+    background: linear-gradient(to right, #707bff, #fa52ff);
+    width: 100%;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: 0;
+    box-shadow: 10px 10px 61px 10px #8224fe;
+}
+
+

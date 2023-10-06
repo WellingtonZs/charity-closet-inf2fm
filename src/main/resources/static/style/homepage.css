@@ -4,11 +4,17 @@
     --roxo-destaque:#8224fe;
 }
 
+.mainhome {
+    background-color: black;
+    padding: 5%;
+}
+
 .parte1home{
     background-image: url(/assets/background1homepage.png);
     background-size: cover;
     background-position: fixed;
-    padding-top: 50px;
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
 
 #titulo1-1{
@@ -147,4 +153,27 @@ details{
     margin-top: -10px;
     margin-left: 0;
     box-shadow: 10px 10px 61px 10px #8224fe;
+}
+
+@media screen  and (  max-width: 934px) {
+    .oddshome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #roupahome {
+        width: 100%;
+    }
+
+    #title-odds {
+        text-align: center;
+    }
+
+    .odslogos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        place-items: center;
+    
+    }
 }

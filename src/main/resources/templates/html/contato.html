@@ -24,22 +24,16 @@
   <header class="cabecalho">
     <nav class="nav__bar">
      <div class="logo">
-         <img src="/assets/shortlogocharitycloset.png" style="width: 50px;" alt="">
+      <img src="/assets/longlogo-nobackground.png" style="width: 50%;" alt="">
      </div>
 
      <div class="nav__list">
          <ul>
              <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-             <li class="nav__item"><a href="ongs.html" class="nav__link">ONGS</a></li>
              <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
              <li class="nav__item"><a href="contato.html" class="nav__link">Contato</a></li>
              
-             <div class="buscar">
-              <input class="nav__item" type="search" name="" id="pesquisa"  >
-              <button class="icon__buscar">
-              <i class="fa-solid fa-magnifying-glass" style="color: #8a2be2;"></i>
-            </button>
-            </div>
+             
             </ul>
           
      </div>
@@ -62,7 +56,6 @@
     <div class="mobile__menu">
      <ul>
          <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-             <li class="nav__item"><a href="ongs.html" class="nav__link">ONGS</a></li>
              <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
      </ul>
 
@@ -83,7 +76,7 @@
 
     <section class="formulario-section">
 
-        <form class="form">
+        <form class="form" method="post" action="">
 
             <div class="desc-form">
 
@@ -104,58 +97,58 @@
                         <h1 id="nome-input">
                             MOTIVO DO CONTATO:
                         </h1>
-                        <input id="input" type="text" name="nome_ong" maxlength="400"
-                            placeholder="Digite motivo de contato" required>
-                    </label>
+                        <input id="inputmotivo" type="text" name="motivo_contato" maxlength="400"
+                            placeholder="Digite motivo de contato"  required>
+                    </label><br />
                     <label id="label">
                         <h1 id="nome-input">
                             SUA PERGUNTA
                         </h1>
-                        <input id="input" type="text" name="nome_ong" maxlength="400"
-                            placeholder="Faça sua pergunta" required>
-                    </label>
+                        <input id="inputpergunta" type="text" name="pergunta" maxlength="400"
+                            placeholder="Faça sua pergunta"  required>
+                    </label><br />
 
                     <div class="form-2">
                         <label id="label">
                             <h1 id="nome-input">
                                 NOME:
                             </h1>
-                            <input id="input2" type="text" name="nome_ong" maxlength="40"
-                                placeholder="Digite seu nome" required>
+                            <input class="form-2__inputs" id="nome" type="text" name="nome_ong" maxlength="50"
+                                placeholder="Digite seu nome" pattern="[a-zA-Záãâéêíóôõú\s]+$"  required>
                         </label>
     
                         <label id="label">
                             <h1 id="nome-input">
                                 SOBRENOME:
                             </h1>
-                            <input id="input2" type="text" name="nome_ong" maxlength="40"
-                                placeholder="Digite seu sobrenome" required>
+                            <input class="form-2__inputs" id="sobrenome" type="text" name="nome_ong" maxlength="50"
+                                placeholder="Digite seu sobrenome"  pattern="[a-zA-Záãâéêíóôõú\s]+$" required>
                         </label>
-                    </div>
+                    </div><br />
 
                     <label id="label">
                         <h1 id="nome-input">
                             ENDEREÇO DE E-MAIL:
                         </h1>
-                        <input id="input" type="email" name="nome_ong" maxlength="100"
+                        <input id="email" type="email" name="email" maxlength="100"
                             placeholder="Digite seu email" required>
-                    </label>
+                    </label><br />
 
                    <div class="form-3">
                     <label id="label">
                         <h1 id="nome-input">
                             CPF:
                         </h1>
-                        <input id="input3" type="text" name="cpf" maxlength="11"
-                            placeholder="Digite seu cpf" required>
+                        <input class="form-3__inputs" id="cpf" type="text" name="cpf" maxlength="11"
+                            placeholder="Digite seu cpf" pattern="[0-9]{11}" required>
                     </label>
 
                     <label id="label">
                         <h1 id="nome-input">
                             Número de celular
                         </h1>
-                        <input type="tel" id="input3" name="celular" placeholder="(XX) XXXXX-XXXX"
-                            pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required>
+                        <input class="form-3__inputs" type="tel" id="tel" name="celular" placeholder="(XX) XXXXX-XXXX"
+                            pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" maxlength="15" required>
                     </label>
                    </div>
                 </div>
@@ -196,7 +189,7 @@
       <div class="footerpart3">
         <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
         <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
-        <a id="link-footer-pt3" href="contato.html">FAQ</a>
+
       </div>
 
       <div class="divisaodofooter2">

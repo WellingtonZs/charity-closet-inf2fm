@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/teste.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <button id="abrir-modal">Editar</button>
+
+    
+    <dialog id="modal">
+        <div class="header__modal">
+            <h2>Editar perfil</h2>
+            <div>
+                <button>Close</button>
+            </div>
+        </div>
+    </dialog>
+               
+    <script>
+        const abrirModal = document.querySelector('abrir-modal');
+        const minhaModal = document.querySelector('modal');
+
+        abrirModal.addEventListener('click', () => {
+            minhaModal.showModal();
+        })
+    </script>
+</body>
+</html>

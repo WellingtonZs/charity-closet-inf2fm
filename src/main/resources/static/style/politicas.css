@@ -1,0 +1,72 @@
+@import url(header.css);
+@import url(footer.css);
+
+:root {
+    --cor-de-fundo: #181818;
+    --cor-de-fundo-secundario: #E8E3E3;
+    --branco: #fff;
+    --preto: #000000;
+    --titulo-homepage:#fff;
+    --roxo-destaque:#8224fe;
+
+}
+
+.img{
+    background-image: url(/assets/background1homepage.png);
+    background-size: cover;
+    background-position: fixed;
+    padding-top: 22%;
+    padding-bottom: 10%;
+}
+
+.inicio {
+    text-align: center;
+    margin-bottom: 1%;
+    color: #fff;
+}
+
+.div-gradiente-home{
+    background: linear-gradient(to right, #707bff, #fa52ff);
+    width: 100%;
+    height: 0.5rem;
+    margin-top: -10px;
+    margin-left: 0;
+    box-shadow: 10px 10px 61px 10px #8224fe;
+}
+
+
+.principal {
+    background: var(--cor-de-fundo);
+    color: var(--preto);
+    padding: 5%;
+    
+    
+}
+
+.politicas {
+    margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 1.5%;
+    background-color: var(--branco);
+    width: 50%;
+}
+
+.titulo__principal {
+    text-align: center;
+}
+
+.texto {
+    margin: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: start;
+
+}
+
+.lista__itens1 {
+    list-style: inside;
+}
+
+.titulo__secundario {
+    padding-left: 2%;
+}

@@ -46,7 +46,7 @@
     font-size: 20px;
 }
 
-#input {
+input {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
@@ -58,6 +58,8 @@
 
 #label {
     margin-bottom: 20px;
+    display: grid;
+    margin-top: 1em;
 }
 
 .form-1 {
@@ -135,6 +137,7 @@
     text-decoration: none;
     border: none;
     margin-top: 40px;
+    margin-right: 1em;
 }
 
 #botao-form:hover {
@@ -166,3 +169,15 @@
     transition-duration: 0.5s;
     transform: scale(1.1);
 }
+
+#selectuf{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #8224fe;
+    background-color: #fff;
+    color: #8224fe;
+    font-weight: 600;
+}
+
