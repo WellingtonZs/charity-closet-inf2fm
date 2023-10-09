@@ -96,7 +96,7 @@
                             <h1 id="nome-input">
                                 Nome da ONG
                             </h1>
-                            <input id="inputnomeong" type="text" name="nome_ong" maxlength="40"
+                            <input id="inputnomeong" type="text" name="nome_ong" maxlength="100"
                                 placeholder="Digite o nome da ONG" required pattern="[A-Za-z]+">
                         </label>
                         <label id="label">
@@ -129,7 +129,7 @@
                                 Número de celular
                             </h1>
                             <input type="tel" id="inputnum" name="celular" placeholder="(XX) XXXXX-XXXX"
-                                pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
+                                pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required maxlength="20">
                         </label>
 
                         <div class="endereco-div">
@@ -198,12 +198,12 @@
                         <br>
                         <label id="label">
                             <h1 id="nome-input">Senha: </h1>
-                            <input type="password" id="inputsenha" name="senha" required>
+                            <input type="password" id="inputsenha" name="senha" required maxlength="100">
                         </label>
                         <br>
                         <label id="label">
                             <h1 id="nome-input"> Confirmação de Senha:</h1>
-                            <input type="password" id="inputsenha1" name="confirmar_senha" required>
+                            <input type="password" id="inputsenha1" name="confirmar_senha" required maxlength="100">
                         </label>
 
                     </div>
