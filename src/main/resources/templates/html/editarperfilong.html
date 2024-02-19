@@ -93,14 +93,14 @@
                             <h1 id="nome-input">
                                 NOME DA ONG:
                             </h1>
-                            <input id="inputmotivo" type="text" name="nome" maxlength="50"
-                                placeholder="Digite um novo nome"  required>
+                            <input id="inputnomeong" type="text" name="nome_ong" maxlength="100"
+                                placeholder="Digite um novo nome" required pattern="[A-Za-z]+"  required>
                         </label><br />
                         <label id="label">
                             <h1 id="nome-input">
                                 EMAIL:
                             </h1>
-                            <input id="inputpergunta" type="email" name="pergunta" maxlength="200"
+                            <input id="inputemail" type="email" name="email_ong" maxlength="100"
                                 placeholder="Digite seu email"  required>
                         </label><br />
 
@@ -108,7 +108,7 @@
                             <h1 id="nome-input">
                                 Descrição de Atuação:
                             </h1>
-                            <input id="inputpergunta" type="text" name="Descrição de Atuação" maxlength="200"
+                            <input id="inputpergunta" type="text" name="Descrição de Atuação" maxlength="240" cols="40" rows="6"
                                 placeholder="Descrição de Atuação"  required>
                         </label><br />
 
@@ -116,7 +116,7 @@
                             <h1 id="nome-input">
                                 Telefone:
                             </h1>
-                            <input class="form-2__inputs" id="Telefone" type="tel" name="tel_ong"  placeholder="(XX) XXXXX-XXXX"
+                            <input class="form-2__inputs" id="inputnum" type="tel" name="celular"  placeholder="(XX) XXXXX-XXXX"
                             pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" maxlength="20" required>
                         </label><br />
 
