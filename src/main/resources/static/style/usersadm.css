@@ -1,6 +1,6 @@
 .main-users{
-    padding-top:5em;
-    padding-left: 3em;
+    text-align: center;
+    padding: 5%;
     background-color: #181818;
 }
 
@@ -11,7 +11,10 @@
 
 .conteudo{
     display: flex;
-    margin-top: 5%;
+    justify-content: space-between;
+    padding: 5rem;
+    gap: 8rem;
+    
 }
 
 .icons{
@@ -25,6 +28,11 @@
     border-style: solid;
     border-width: 2px;
     border-radius: 100% ;
+    border-color: rgb(0, 0, 0);
+}
+
+.icon-img-ativo {
+    border-style: double ;
 }
 
 #title-icon{
@@ -38,11 +46,13 @@
 .gerenciamento{
     background-color: #fff;
     float: right;
-    margin-right: 10%;
-    margin-left: 10%;
+    overflow-x: auto;
     padding: 2em;
     border-radius: 10px;
+    
 }
+
+
 
 .thead{
     font-weight: bold;
@@ -69,3 +79,33 @@ select{
     border-style: none;
     border-radius: 5px;
 }
+
+
+#input {
+    display: none;
+}
+
+.btn-user {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width:1097px)  {
+    .main-users {
+        display: grid;
+    }
+
+    .conteudo{
+        display: grid;
+    }
+
+    .icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+} 
+

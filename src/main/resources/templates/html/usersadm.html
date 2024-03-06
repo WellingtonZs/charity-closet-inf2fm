@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -20,51 +20,21 @@
 
 <body>
 
-    <header class="cabecalho">
-        <nav class="nav__bar">
-            <div class="logo">
-                <img src="/assets/longlogo-nobackground.png" style="width: 50%;" alt="">
-
-            </div>
-
-            <div class="nav__list">
-                <ul>
-                    <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="ongs.html" class="nav__link">Users</a></li>
-                    <li class="nav__item"><a href="sobrenos.html" class="nav__link1">a</a></li>
-
-                    
-                </ul>
-
-            </div>
-
-            <div class="login__button">
-                <a href="homepage.html" id="loginbuttonheader">Sair</a>
-                <div>
-                    <a href="">
-                        <img src="/assets/configicon.png" alt="" id="configicon">
-                </div>
-                </a>
-
-            </div>
-
-            <div class="mobile__menu__icon">
-                <button onclick="menushow()"><img class="icon" src="/assets/Menu.svg" alt=""></button>
-            </div>
+    <header id="cabecalho">
+        <a href="/html/index.html" id="logo"><img src="/assets/longlogo-nobackground.png" style="width: 16rem;" alt=""></a>
+        <nav id="nav">
+          <button id="btn-mobile">
+          <span id="hambuguer"></span>
+          </button>
+          <ul id="menu">
+            <li><a id="itens" href="/html/index.html">Home</a></li>
+            <li><a id="itens" href="/html/contato.html">Contato</a></li>
+            <li><a id="itens" href="/html/perfilong.html">Meu Perfil ONG</a></li>
+            <li><a id="itens" href="/html/sobrenos.html">Sobre nós</a></li>
+            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" href="/html/login.html"><span>Entrar</span></a></li>
+          </ul>
         </nav>
-
-        <div class="mobile__menu">
-            <ul>
-                <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="ongs.html" class="nav__link">Users</a></li>
-                <li class="nav__item"><a href="sobrenos.html" class="nav__link1">ONGS</a></li>
-            </ul>
-
-            <div class="login__button">
-                <button><a href="login.html">Entrar</a></button>
-            </div>
-        </div>
-    </header>
+      </header>
 
     <main class="main-users">
 
@@ -73,10 +43,18 @@
         <section class="conteudo">
 
             <div class="icons">
+
+                <label class="btn-user" for="input">
+                    <img class="icon-img-ativo" id="icon-img" src="/assets/usericon.png">
+                    <input type="radio" name="input1" id="input">
+                    <span>ONGS</span>
+                </label>
+
+                <!--
                 <figure class="icons-figure">
                     <img id="icon-img" src="/assets/usericon.png"style="border-style: double; border-width: 5px;">
                     <h3 id="title-icon" > ONG</h3>
-                </figure>
+                </figure>-->
                 <figure class="icons-figure">
                     <img id="icon-img" src="/assets/usericon.png">
                     <h3 id="title-icon"> Doador</h3>
@@ -105,40 +83,33 @@
                         <td>&nbsp;CAUÃ</td>
                         <td>&nbsp;C@HORSE.COM</td>
                         <td>&nbsp;FREDDIEMERCURY</td>
-                        <td>&nbsp;<select>
+                        <td>&nbsp;
+                            <select>
                             <option>APROVADO</option>
                             <option>BANIDO</option>
                             <option>ANALISE</option>
-                        </select></td>
+                        </select>
+                    </td>
                     </tr>
                     <tr>
                         <td>&nbsp;GRADUATION</td>
                         <td>&nbsp;GUSTAVO</td>
                         <td>&nbsp;G@HORSE.COM</td>
                         <td>&nbsp;AMYWINEHOUSE</td>
-                        <td>&nbsp;<select>
+                        <td>&nbsp;
+                            <select>
                             <option>APROVADO</option>
                             <option>BANIDO</option>
                             <option>ANALISE</option>
                         </select></td>
                     </tr>
-                    <tr>
-                        <td>&nbsp;DONDA</td>
-                        <td>&nbsp;IZABELLA</td>
-                        <td>&nbsp;I@HORSE.COM</td>
-                        <td>&nbsp;MICHAELJACKSON</td>
-                        <td>&nbsp;<select>
-                            <option>APROVADO</option>
-                            <option>BANIDO</option>
-                            <option>ANALISE</option>
-                        </select></td>
-                    </tr>
-                    <tr>
+                    
                         <td>&nbsp;YEEZUS</td>
                         <td>&nbsp;LEANDRO</td>
                         <td>&nbsp;L@HORSE.COM</td>
                         <td>&nbsp;FRANKSINATRA</td>
-                        <td>&nbsp;<select>
+                        <td>&nbsp;
+                            <select>
                             <option>APROVADO</option>
                             <option>BANIDO</option>
                             <option>ANALISE</option>
@@ -149,22 +120,41 @@
                         <td>&nbsp;NATHALIA</td>
                         <td>&nbsp;N@HORSE.COM</td>
                         <td>&nbsp;OZZYOSBOURNE</td>
-                        <td>&nbsp;<select>
+                        <td>&nbsp;
+                            <select>
+                            <option>APROVADO</option>
+                            <option>BANIDO</option>
+                            <option>ANALISE</option>
+                        </select></td>
+                    </tr>
+
+
+<tr>
+                        <td>&nbsp;DONDA</td>
+                        <td>&nbsp;RUAN</td>
+                        <td>&nbsp;I@HORSE.COM</td>
+                        <td>&nbsp;MICHAELJACKSON</td>
+                        <td>&nbsp;
+                            <select>
                             <option>APROVADO</option>
                             <option>BANIDO</option>
                             <option>ANALISE</option>
                         </select></td>
                     </tr>
                     <tr>
+
+                    <tr>
                         <td>&nbsp;WATCHTHRONE</td>
                         <td>&nbsp;WELLINGTON</td>
                         <td>&nbsp;W@HORSE.COM</td>
                         <td>&nbsp;JOHNLENNON</td>
-                        <td>&nbsp;<select>
+                        <td>&nbsp;
+                            <select>
                             <option>APROVADO</option>
                             <option>BANIDO</option>
                             <option>ANALISE</option>
-                        </select></td>
+                        </select>
+                    </td>
                     </tr>
                     <tbody>
                 </table>
@@ -206,10 +196,11 @@
                             <li id="itemfooter">02 Cauã Santana</li>
                             <li id="itemfooter">07 Gustavo Alves</li>
                             <li id="itemfooter">08 Gustavo Gomes</li>
-                            <li id="itemfooter">09 Izabella Oliveira</li>
                             <li id="itemfooter">14 Leandro Afonso Niches</li>
                             <li id="itemfooter">24 Natalia Lima </li>
+                             <li id="itemfooter">28 Ruan Pablo Braga Mendes</li>
                             <li id="itemfooter">33 Wellington Cavalcante </li>
+                           
                         </h2>
                     </div>
                     <div class="profediscfooter">
@@ -227,5 +218,6 @@
     </footer>
 
 </body>
-
+<script type="text/javascript" src="/script/menu.js" defer></script>
+<script type="text/javascript" src="/script/userAdm.js" defer></script>
 </html>

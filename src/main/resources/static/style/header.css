@@ -1,205 +1,156 @@
-
-.cabecalho {
-    background-color: black;
-    box-shadow: 0px 3px 10px rgba(22, 22, 22, 0.541);
-    height: 60px;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    
+@font-face {
+    font-family: "SoDo Sans SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.eot");
+    src: url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.svg#SoDo Sans SemiBold")format("svg");
 }
 
+ul {
+    margin: 0px;
+    padding: 0px;
+}
 
-.nav__bar{
+#logo {
+    display: block;
+}
+
+#itens{
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-decoration:none ;
+    font-family: "SoDo Sans SemiBold";
+    margin-top: 1em;
+}
+
+#itens:hover{
+    border-bottom: 1px solid #8224fe;
+    padding-bottom: 1px;
+    transition: 0.5s;
+}
+
+#cabecalho{
+    box-sizing: border-box;
+    left:0;
+    right: 0;
+    z-index: 999;
+    height: 60px;
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    padding: 0rem 6rem;
     align-items: center;
+    justify-content: space-around;
+    background: #000000;
+    position: fixed;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
 } 
 
-.logo{
-    display: flex;
-    align-items: center;
-}
-
-.nav__list{
-    display: flex;
-    align-items: center;
-    margin-top: 1em;
-    margin-right: 10%;
-}
-
-.nav__list ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 10rem;
-}
-
-.nav__item {
-    margin: 0 15px;
-
-}
-
-.nav__link {
-    text-decoration: none;
-    font-size: 1.15ren;
-    color: #fff;
+.btn-entrar {
+    letter-spacing: 0.1em;
     font-weight: 400;
-    white-space: nowrap;
+    transition: 0.5s;
+    border-radius: 15px;
+    padding-left: 10px;
 }
 
-.nav__link1{
-    opacity: 0;
+.btn-entrar:hover {
+    background: linear-gradient(to right, #707bff, #fa52ff);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 25px #707bff;
 }
 
-.nav__link:hover {
-color: #8224fe;
-transition-duration: 1s;
-text-decoration: underline;
-text-underline-offset: 10px;
-}
-
-.login__button  {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.login__button button a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-}
-
-.mobile__menu__icon {
+#btn-mobile {
     display: none;
 }
 
-.mobile__menu {
-    display: none;
-}
+@media (max-width: 800px) {
 
-#pesquisa {
-border-radius: 1.5rem;
-border: none;
-margin: 0;
-box-sizing: border-box;
-   
-}
-
-.buscar {
-    background-color: #fff;
-    width: 40%;
-    height: 25%;
-    border-radius: 1.5rem;
-    
-}
-
-.icon__buscar {
-    background: transparent;
-    border: none;
-    ;
-}
-
-#loginbuttonheader{
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    white-space: nowrap;
-    font-size: 16px;
-    line-height: 55px;
-    margin-left: 2em;
-}
-
-#loginbuttonheader:hover{
-    color: #8224fe;
-    transition-duration: 1s;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-}
-
-#btn__login{
-    border-radius: 1.5rem;
-    width: 50%;
-    height: 25%;
-}
-
-#configicon {
-    filter: invert(18%) sepia(82%) saturate(6310%) hue-rotate(266deg) brightness(101%) contrast(99%);
-    width: 20px;
-    margin-left: 30px;
-}
-
-#configicon:hover{
-    filter: invert(100%);
-    transition-duration:0.3s ;
-}
-
-.logo__mobile {
-    display: none;
-}
-
-@media screen  and (max-width: 730px) {
-    .nav__bar {
-        padding: 1.5rem 4rem;
-    }
-    .buscar .icon__buscar{
-        display: none;
-    }
-    .nav__item {
-        display: none;
-    }
-
-    .login__button {
-        display: none;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .mobile__menu__icon {
+    #menu {
         display: block;
-    }
-
-    .logo__mobile {
-        display: dis;
-        
-        
-    
-    }
-
-    .mobile__menu__icon button  {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-
-    
-
-    .mobile__menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-
-    .mobile__menu .nav__item {
-        display: block;
-        padding-top: 1.2rem;
-    }
-
-    .mobile__menu .login__buttom {
-        display: block;
-        padding: 1rem 2rem;
-    }
-
-    .mobile__menu .login__buttom button {
+        position: absolute;
         width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #181818;
+       height: 0px;
+       transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
     }
 
-    
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu #itens {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(255, 238, 238, 0.404);
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: white;
+        gap: .5rem;
+    }
+
+    #hambuguer {
+        display: block;
+        border-top: 2px solid #ffffff;
+        width: 20px;
+    }
+
+    #hambuguer::after,  #hambuguer::before {
+        width: 20px;
+        content: '';
+        display: block;
+        height: 2px;
+        background: white;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hambuguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hambuguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+
+    #nav.active #hambuguer::before {
+      transform: rotate(135deg);
+    }
+
+    .btn-entrar{
+        text-align: center;
+    }
+}
+
+@media (max-width: 1132px) {
+    #cabecalho{ flex-wrap: wrap;
+    padding: 0px;
+    height: 100px;
+    }
 }

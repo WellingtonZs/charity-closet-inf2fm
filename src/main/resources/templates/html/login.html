@@ -20,49 +20,20 @@
 
 <body>
 
-    <header class="cabecalho">
-        <nav class="nav__bar">
-         <div class="logo">
-            <img src="/assets/longlogo-nobackground.png" style="width: 50%;" alt="">
-         </div>
-    
-         <div class="nav__list">
-             <ul>
-                 <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                 <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
-                 <li class="nav__item"><a href="contato.html" class="nav__link">Contato</a></li>
-                 
-                 
-                </div>
-                </ul>
-              
-         </div>
-    
-         <div class="login__button">
-             <a href="login.html" id="loginbuttonheader">Entrar</a>
-             <div>
-             <a href="">
-             <img src="/assets/configicon.png" alt="" id="configicon" >
-            </div>
-            </a>
-    
-         </div>
-    
-         <div class="mobile__menu__icon">
-             <button onclick="menushow()"><img class="icon" src="/assets/Menu.svg" alt=""></button>
-         </div>
+    <header id="cabecalho">
+        <a href="/html/index.html" id="logo"><img src="/assets/longlogo-nobackground.png" style="width: 16rem;" alt=""></a>
+        <nav id="nav">
+          <button id="btn-mobile">
+          <span id="hambuguer"></span>
+          </button>
+          <ul id="menu">
+            <li><a id="itens" href="/html/index.html">Home</a></li>
+            <li><a id="itens" href="/html/contato.html">Contato</a></li>
+            <li><a id="itens" href="/html/perfilong.html">Meu Perfil ONG</a></li>
+            <li><a id="itens" href="/html/sobrenos.html">Sobre nós</a></li>
+            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" href="/html/login.html"><span>Entrar</span></a></li>
+          </ul>
         </nav>
-    
-        <div class="mobile__menu">
-         <ul>
-             <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                 <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
-         </ul>
-    
-         <div class="login__button">
-             <button><a href="login.html">Entrar</a></button>
-         </div>
-        </div>
       </header>
     
 
@@ -152,11 +123,10 @@
                             <li id="itemfooter">02 Cauã Santana</li>
                             <li id="itemfooter">07 Gustavo Alves</li>
                             <li id="itemfooter">08 Gustavo Gomes</li>
-                            <li id="itemfooter">09 Izabella Oliveira</li>
-                            <li id="itemfooter">14 Leandro Afonso Niches</li>
-                            <li id="itemfooter">24 Natalia Lima </li>
-                            <li id="itemfooter">33 Wellington Cavalcante </li>
-                        </h2>
+                            <li id="itemfooter">13 Leandro Afonso Niches</li>
+                            <li id="itemfooter">23 Natalia Lima </li>
+                            <li id="itemfooter">28 Ruan Pablo Braga Mendes</li>
+                            <li id="itemfooter">32 Wellington Cavalcante </li>                        </h2>
                     </div>
                     <div class="profediscfooter">
                         <h2 id="itensfooter2">ITB - FIEB
@@ -173,5 +143,5 @@
     </footer>
 
 </body>
-
+<script type="text/javascript" src="/script/menu.js"></script>
 </html>

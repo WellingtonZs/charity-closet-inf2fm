@@ -219,3 +219,34 @@ label {
     transition-duration: 0.5s;
     transform: scale(1.1);
 }
+
+@media (max-width: 890px) {
+    
+    .form{
+        width: 70%;
+    }
+    
+    .form-2 { 
+    display: grid;
+    grid-template-columns: 100%;
+    }
+
+    .form-3 { 
+        display: grid;
+        grid-template-columns: 100%;
+        }
+
+        .formulario-section{
+            display: grid;
+            justify-items: center;
+            width: 80%;
+            margin-left: 6%;
+            padding: 10% 0%;
+        }
+
+        .contato{
+            padding: 20% 2%;
+            display: grid;
+            justify-items: center;
+        }
+}

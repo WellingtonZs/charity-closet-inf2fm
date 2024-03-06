@@ -1,156 +1,134 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="/script/cadastrochoice.js"></script>
-        <script type="text/javascript" src="/script/headerbotaohref.js"></script>
-        <script src="/script/perfil.js"></script>
-        <link href="/style/perfilong.css" rel="stylesheet">
-        <link href="/style/header.css" rel="stylesheet">
-        <link href="/style/footer.css" rel="stylesheet">
-        <link href="/style/reset.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <title>Perfil | Charity Closet</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/script/cadastrochoice.js"></script>
+    <script type="text/javascript" src="/script/headerbotaohref.js"></script>
+    <script src="/script/perfil.js"></script>
+    <link href="/style/perfilong.css" rel="stylesheet">
+    <link href="/style/header.css" rel="stylesheet">
+    <link href="/style/footer.css" rel="stylesheet">
+    <link href="/style/reset.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Perfil | Charity Closet</title>
+</head>
 
-    <body>
+<body>
 
-        <header class="cabecalho">
-            <nav class="nav__bar">
-            <div class="logo">
-                <img src="/assets/longlogo-nobackground.png" style="width: 50%;" alt="">
+    <header id="cabecalho">
+        <a href="/html/index.html" id="logo"><img src="/assets/longlogo-nobackground.png" style="width: 16rem;" alt=""></a>
+        <nav id="nav">
+          <button id="btn-mobile">
+          <span id="hambuguer"></span>
+          </button>
+          <ul id="menu">
+            <li><a id="itens" href="/html/index.html">Home</a></li>
+            <li><a id="itens" href="/html/contato.html">Contato</a></li>
+            <li><a id="itens" href="/html/perfilong.html">Meu Perfil ONG</a></li>
+            <li><a id="itens" href="/html/sobrenos.html">Sobre nós</a></li>
+            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" href="/html/login.html"><span>Entrar</span></a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <main class="login-main">
+
+        <section class="login-section">
+
+            
+            <img src="/assets/logo_perfil005.jpg" class="picture__img">
+
+            <div class="conteudo-ong-perfil">
+                <section class="nome-ong-perfil">
+                    <h1>Soulskien ONG</h1>
+                </section>
             </div>
-        
-            <div class="nav__list">
+
+            <div>
+                <button id="btn"><a id="link_entrar" href="editarperfilong.html">Editar</a></button>
+            </div>
+
+            <div class="info">
                 <ul>
-                    <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
-                    <li class="nav__item"><a href="contato.html" class="nav__link">Contato</a></li>
-                    
-                    
-                    </ul>
-                
-            </div>
-        
-            <div class="login__button">
-                <a href="login.html" id="loginbuttonheader">Entrar</a>
-                <div>
-                <a href="">
-                <img src="/assets/configicon.png" alt="" id="configicon" >
-                </div>
-                </a>
-        
-            </div>
-        
-            <div class="mobile__menu__icon">
-                <button onclick="menushow()"><img class="icon" src="/assets/Menu.svg" alt=""></button>
-            </div>
-            </nav>
-        
-            <div class="mobile__menu">
-            <ul>
-                <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre nós</a></li>
-            </ul>
-        
-            <div class="login__button">
-                <button><a href="login.html">Entrar</a></button>
-            </div>
-            </div>
-        </header>
+                    <li>focados a trazer aconchego aqueles que não tem nada </li>
+                    <strong>
+                        <li>Contato:<br />
+                    </strong>
+                    Email:soulskien@gmail.com<br />
+                    <strong>Telefone:</strong><br />
+                    (11)97791-4506</li>
 
-        <main class="escolha-main">
-            <section class="principal">
-                <div class="capa">
-                    <img id="background__perfil" src="/assets/ong__perfil.jfif" alt="" style="width: 600px;">
-                    <div class="round">
-                        <img id="capa__perfil" src="/assets/capa2.jpeg" alt="" style="width: 200px;">
+                    <h5>aceitamos:</h5>
+                    <li>Camisas</li>
+                    <li>Bermudas</li>
+                    <li>Casacos</li>
 
-                        <button id="open-modal"><a href="editarperfilong.html">Editar</a></button>
-                        
+                </ul>
+            </div>
+        </section>
+
+        <div style="height:50px;background-color: #181818;">
+        </div>
 
 
+
+    </main>
+
+
+    <footer class="footergeral">
+
+        <section class="footercontent">
+
+            <figure class="logofooter">
+                <img id="logofooter" src="/assets/shortlogocharitycloset.png">
+                <h1 id="text-logo-footer">
+                    charity closet.
+                </h1>
+            </figure>
+
+            <div class="footerpart2">
+                <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
+                <a id="link-footer-pt2" href="contato.html">Contato</a>
+            </div>
+
+            <div class="footerpart3">
+                <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
+                <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
+
+            </div>
+
+            <div class="divisaodofooter2">
+                <div class="origemdotrabalho">
+                    <div class="integrantesdiv">
+                        <h2 id="itensfooter2">Integrantes:
+                            <li id="itemfooter">02 Cauã Santana</li>
+                            <li id="itemfooter">07 Gustavo Alves</li>
+                            <li id="itemfooter">08 Gustavo Gomes</li>
+                            <li id="itemfooter">13 Leandro Afonso Niches</li>
+                            <li id="itemfooter">23 Natalia Lima </li>
+                            <li id="itemfooter">28 Ruan Pablo Braga Mendes</li>
+                            <li id="itemfooter">32 Wellington Cavalcante </li>                        </h2>
                     </div>
-                    <div class="info">
-                        <h2>Soul Skien</h2>
-                        <ul>
-                            <li>focados a trazer aconchego aqueles que não tem nada </li>
-                            <strong><li>Contato:<br/></strong>
-                            Email:soulskien@gmail.com<br/>
-                            <strong>Telefone:</strong><br/>
-                            (11)97791-4506</li>
-                            <ul>
-                                <h5>aceitamos:</h5>
-                                <li>Camisas</li>
-                                <li>Bermudas</li>
-                                <li>Casacos</li>
-                            </ul>
-                        </ul>
-                    </div>
-                    <hr class="linha">
-                    <div class="avaliacao">
-                        <h3>Deixe aqui sua avaliação sobre nós:<br/>
-                        <textarea name="" id="" cols="30" rows="10"></textarea> </h3>
+                    <div class="profediscfooter">
+                        <h2 id="itensfooter2">ITB - FIEB
+                            <li id="itemfooter">Brasílio Flores de Azevedo</li>
+                        </h2>
+                        <h2 id="itensfooter2">Curso
+                            <li id="itemfooter">Informática 2022 - 2024</li>
+                        </h2>
                     </div>
                 </div>
-            </section>
-        </main>
 
-        <footer class="footergeral">
+        </section>
 
-            <section class="footercontent">
+    </footer>
 
-                <figure class="logofooter">
-                    <img id="logofooter" src="/assets/shortlogocharitycloset.png">
-                    <h1 id="text-logo-footer">
-                        charity closet.
-                    </h1>
-                </figure>
-
-                <div class="footerpart2">
-                    <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
-                    <a id="link-footer-pt2" href="contato.html">Contato</a>
-                </div>
-
-                <div class="footerpart3">
-                    <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
-                    <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
-
-                </div>
-
-                <div class="divisaodofooter2">
-                    <div class="origemdotrabalho">
-                        <div class="integrantesdiv">
-                            <h2 id="itensfooter2">Integrantes:
-                                <li id="itemfooter">02 Cauã Santana</li>
-                                <li id="itemfooter">07 Gustavo Alves</li>
-                                <li id="itemfooter">08 Gustavo Gomes</li>
-                                <li id="itemfooter">09 Izabella Oliveira</li>
-                                <li id="itemfooter">14 Leandro Afonso Niches</li>
-                                <li id="itemfooter">24 Natalia Lima </li>
-                                <li id="itemfooter">33 Wellington Cavalcante </li>
-                            </h2>
-                        </div>
-                        <div class="profediscfooter">
-                            <h2 id="itensfooter2">ITB - FIEB
-                                <li id="itemfooter">Brasílio Flores de Azevedo</li>
-                            </h2>
-                            <h2 id="itensfooter2">Curso
-                                <li id="itemfooter">Informática 2022 - 2024</li>
-                            </h2>
-                        </div>
-                    </div>
-
-            </section>
-
-        </footer>
-
-    </body>
-
-    </html>
+</body>
+<script type="text/javascript" src="/script/menu.js"></script>
+</html>
