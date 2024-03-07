@@ -28,11 +28,11 @@
           <span id="hambuguer"></span>
           </button>
           <ul id="menu">
-            <li><a id="itens" href="/html/index.html">Home</a></li>
-            <li><a id="itens" href="/html/contato.html">Contato</a></li>
-            <li><a id="itens" href="/html/perfilong.html">Meu Perfil ONG</a></li>
-            <li><a id="itens" href="/html/sobrenos.html">Sobre nós</a></li>
-            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" href="/html/login.html"><span>Entrar</span></a></li>
+            <li><a id="itens" th:href="@{/charitycloset/index}">Home</a></li>
+            <li><a id="itens" th:href="@{/charitycloset/contato}">Contato</a></li>
+            <li><a id="itens" th:href="@{/charitycloset/perfil-ong}">Meu Perfil ONG</a></li>
+            <li><a id="itens" th:href="@{/charitycloset/sobre-nos}">Sobre nós</a></li>
+            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" th:href="@{/charitycloset/login}"><span>Entrar</span></a></li>
           </ul>
         </nav>
       </header>
@@ -51,7 +51,7 @@
             </div>
 
             <div>
-                <button id="btn"><a id="link_entrar" href="editarperfilong.html">Editar</a></button>
+                <button id="btn"><a id="link_entrar" th:href="@{/charitycloset/editar-ong}">Editar</a></button>
             </div>
 
             <div class="info">
@@ -93,13 +93,13 @@
             </figure>
 
             <div class="footerpart2">
-                <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
-                <a id="link-footer-pt2" href="contato.html">Contato</a>
+                <a id="link-footer-pt2" th:href="@{/charitycloset/sobre-nos}">Sobre o Projeto</a>
+                <a id="link-footer-pt2" th:href="@{/charitycloset/contato}">Contato</a>
             </div>
 
             <div class="footerpart3">
-                <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
-                <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
+                <a id="link-footer-pt3" th:href="@{/charitycloset/politicas}">Política de Privacidade</a>
+                <a id="link-footer-pt3" th:href="@{/charitycloset/termos-uso}">Termos de Uso</a>
 
             </div>
 
