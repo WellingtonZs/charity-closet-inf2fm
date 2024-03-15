@@ -1,88 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="/script/login.js"></script>
-    <script type="text/javascript" src="/script/headerbotaohref.js"></script>
-    <link href="/style/usersadm.css" rel="stylesheet">
-    <link href="/style/header.css" rel="stylesheet">
-    <link href="/style/footer.css" rel="stylesheet">
-    <link href="/style/reset.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Login ADM | Charity Closet</title>
+    <link rel="stylesheet" href="style/usersadm.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+ 
+    <title>Document</title>
 </head>
-
 <body>
-
     <header id="cabecalho">
-        <a th:href="@{/charitycloset/index}" id="logo"><img src="/assets/longlogo-nobackground.png" style="width: 16rem;" alt=""></a>
+        <a href="html/index.html" id="logo"><img src="assets/longlogo-nobackground.png" style="width: 16rem;" alt=""></a>
         <nav id="nav">
           <button id="btn-mobile">
           <span id="hambuguer"></span>
           </button>
           <ul id="menu">
-            <li><a id="itens" th:href="@{/charitycloset/index}">Home</a></li>
-            <li><a id="itens" th:href="@{/charitycloset/contato}">Contato</a></li>
-            <li><a id="itens" th:href="@{/charitycloset/perfil-ong}">Meu Perfil ONG</a></li>
-            <li><a id="itens" th:href="@{/charitycloset/sobre-nos}">Sobre nós</a></li>
-            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" th:href="@{/charitycloset/login}"><span>Entrar</span></a></li>
+            <li><a id="itens" href="html/index.html">Home</a></li>
+            <li><a id="itens" href="html/contato.html">Contato</a></li>
+            <li><a id="itens" href="html/perfilong.html">Meu Perfil ONG</a></li>
+            <li><a id="itens" href="html/sobrenos.html">Sobre nós</a></li>
+            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" href="html/login.html"><span>Entrar</span></a></li>
           </ul>
         </nav>
       </header>
 
-    <main class="main-users">
+      <main class="main-user">
+        <div>
+            <h1 id="title-main">Gerenciamento de Usuários</h1>
+        </div>
 
-        <h1 id="title-main">Gerenciamento de Usuários</h1>
-
-        <section class="conteudo">
-
-            <div class="icons">
-
-                <label class="btn-user" for="input">
-                    <img class="icon-img-ativo" id="icon-img" src="/assets/usericon.png">
-                    <input type="radio" name="input1" id="input">
+        <div class="container">
+            <div class="controller-user">
+                <label class="label-user" for="btn-user-ong">
+                    <button type="button" class="btn-user-escolha" id="btn-user-ong" onclick="mudarOngs()">
+                        <img class="icon-img-ativo" id="icon-img" src="assets/usericon.png">
+                    </button>
                     <span>ONGS</span>
                 </label>
 
-                <!--
-                <figure class="icons-figure">
-                    <img id="icon-img" src="/assets/usericon.png"style="border-style: double; border-width: 5px;">
-                    <h3 id="title-icon" > ONG</h3>
-                </figure>-->
-                <figure class="icons-figure">
-                    <img id="icon-img" src="/assets/usericon.png">
-                    <h3 id="title-icon"> Doador</h3>
-                </figure>
-                <figure class="icons-figure">
-                    <img id="icon-img" src="/assets/usericon.png">
-                    <h3 id="title-icon"> ADM</h3>
-                </figure>
+                <label class="label-user" for="btn-user">
+                    <button type="button" class="btn-user-escolha" id="btn-user" onclick="mudarUser()">
+                        <img class="icon-img-ativo" id="icon-img" src="assets/usericon.png">
+                    </button>
+                    <span>Usuários</span>
+                </label>
             </div>
 
-            <div class="gerenciamento">
-
+            <div class="Gerenciamento">
                 <table class="demo">
                     <thead>
-                    <tr>
-                        <th>ONG</th>
-                        <th>Representante</th>
-                        <th>E-mail Rep</th>
-                        <th>Senha</th>
+                    <tr id="title-categoria">
+                        <th class="item">ONG</th>
+                        <th class="item">Representante</th>
+                        <th class="item">E-mail Rep</th>
+                        <th class="item">Senha</th>
                         <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>&nbsp;LIFEOFPABLO</td>
-                        <td>&nbsp;CAUÃ</td>
-                        <td>&nbsp;C@HORSE.COM</td>
-                        <td>&nbsp;FREDDIEMERCURY</td>
+                    <tr id="info">
+                        <td class="item">&nbsp;LIFEOFPABLO</td>
+                        <td class="item">&nbsp;CAUÃ</td>
+                        <td class="item">&nbsp;C@HORSE.COM</td>
+                        <td class="item">&nbsp;FREDDIEMERCURY</td>
                         <td>&nbsp;
                             <select>
                             <option>APROVADO</option>
@@ -91,11 +80,11 @@
                         </select>
                     </td>
                     </tr>
-                    <tr>
-                        <td>&nbsp;GRADUATION</td>
-                        <td>&nbsp;GUSTAVO</td>
-                        <td>&nbsp;G@HORSE.COM</td>
-                        <td>&nbsp;AMYWINEHOUSE</td>
+                    <tr id="info2">
+                        <td class="item">&nbsp;GRADUATION</td>
+                        <td class="item">&nbsp;GUSTAVO</td>
+                        <td class="item">&nbsp;G@HORSE.COM</td>
+                        <td class="item">&nbsp;AMYWINEHOUSE</td>
                         <td>&nbsp;
                             <select>
                             <option>APROVADO</option>
@@ -103,11 +92,11 @@
                             <option>ANALISE</option>
                         </select></td>
                     </tr>
-                    
-                        <td>&nbsp;YEEZUS</td>
-                        <td>&nbsp;LEANDRO</td>
-                        <td>&nbsp;L@HORSE.COM</td>
-                        <td>&nbsp;FRANKSINATRA</td>
+                    <tr id="info3">
+                        <td class="item">&nbsp;YEEZUS</td>
+                        <td class="item">&nbsp;LEANDRO</td>
+                        <td class="item">&nbsp;L@HORSE.COM</td>
+                        <td class="item">&nbsp;FRANKSINATRA</td>
                         <td>&nbsp;
                             <select>
                             <option>APROVADO</option>
@@ -115,12 +104,12 @@
                             <option>ANALISE</option>
                         </select></td>
                     </tr>
-                    <tr>
-                        <td>&nbsp;YE</td>
-                        <td>&nbsp;NATHALIA</td>
-                        <td>&nbsp;N@HORSE.COM</td>
-                        <td>&nbsp;OZZYOSBOURNE</td>
-                        <td>&nbsp;
+                    <tr id="info4">
+                        <td class="item">&nbsp;YE</td>
+                        <td class="item">&nbsp;NATHALIA</td>
+                        <td class="item">&nbsp;N@HORSE.COM</td>
+                        <td class="item">&nbsp;OZZYOSBOURNE</td>
+                        <td class="item">&nbsp;
                             <select>
                             <option>APROVADO</option>
                             <option>BANIDO</option>
@@ -129,11 +118,11 @@
                     </tr>
 
 
-<tr>
-                        <td>&nbsp;DONDA</td>
-                        <td>&nbsp;RUAN</td>
-                        <td>&nbsp;I@HORSE.COM</td>
-                        <td>&nbsp;MICHAELJACKSON</td>
+                    <tr id="info5">
+                        <td class="item">&nbsp;DONDA</td>
+                        <td class="item">&nbsp;RUAN</td>
+                        <td class="item">&nbsp;I@HORSE.COM</td>
+                        <td class="item">&nbsp;MICHAELJACKSON</td>
                         <td>&nbsp;
                             <select>
                             <option>APROVADO</option>
@@ -143,11 +132,11 @@
                     </tr>
                     <tr>
 
-                    <tr>
-                        <td>&nbsp;WATCHTHRONE</td>
-                        <td>&nbsp;WELLINGTON</td>
-                        <td>&nbsp;W@HORSE.COM</td>
-                        <td>&nbsp;JOHNLENNON</td>
+                    <tr id="info6">
+                        <td class="item">&nbsp;WATCHTHRONE</td>
+                        <td class="item">&nbsp;WELLINGTON</td>
+                        <td class="item">&nbsp;W@HORSE.COM</td>
+                        <td class="item">&nbsp;JOHNLENNON</td>
                         <td>&nbsp;
                             <select>
                             <option>APROVADO</option>
@@ -158,34 +147,31 @@
                     </tr>
                     <tbody>
                 </table>
-
             </div>
 
-        </section>
+        </div>
 
-        <div style="width: 100%; height: 30px; background-color: #181818;"></div>
+      </main>
 
-    </main>
-
-    <footer class="footergeral">
+      <footer class="footergeral">
 
         <section class="footercontent">
 
             <figure class="logofooter">
-                <img id="logofooter" src="/assets/shortlogocharitycloset.png">
+                <img id="logofooter" src="assets/shortlogocharitycloset.png">
                 <h1 id="text-logo-footer">
                     charity closet.
                 </h1>
             </figure>
 
             <div class="footerpart2">
-                <a id="link-footer-pt2" th:href="@{/charitycloset/sobre-nos}">Sobre o Projeto</a>
-                <a id="link-footer-pt2" th:href="@{/charitycloset/contato}">Contato</a>
+                <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
+                <a id="link-footer-pt2" href="contato.html">Contato</a>
             </div>
 
             <div class="footerpart3">
-                <a id="link-footer-pt3" th:href="@{/charitycloset/politicas}">Política de Privacidade</a>
-                <a id="link-footer-pt3" th:href="@{/charitycloset/termos-uso}">Termos de Uso</a>
+                <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
+                <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
 
             </div>
 
@@ -197,7 +183,7 @@
                             <li id="itemfooter">07 Gustavo Alves</li>
                             <li id="itemfooter">08 Gustavo Gomes</li>
                             <li id="itemfooter">14 Leandro Afonso Niches</li>
-                            <li id="itemfooter">24 Nathalia Lima </li>
+                            <li id="itemfooter">24 Natalia Lima </li>
                              <li id="itemfooter">28 Ruan Pablo Braga Mendes</li>
                             <li id="itemfooter">33 Wellington Cavalcante </li>
                            
@@ -217,7 +203,6 @@
 
     </footer>
 
+        <script src="script/userAdm.js" defer></script>
 </body>
-<script type="text/javascript" src="/script/menu.js" defer></script>
-<script type="text/javascript" src="/script/userAdm.js" defer></script>
 </html>

@@ -1,27 +1,37 @@
-.main-users{
+body{
+    background: #181818;
+}
+
+#title-main {
+    color: white;
     text-align: center;
-    padding: 5%;
-    background-color: #181818;
+    padding: 3.5%;
+    font-size: 2.5em;
 }
 
-#title-main{
-    color:#fff;
-    font-weight: normal;
-}
-
-.conteudo{
-    display: flex;
-    justify-content: space-between;
-    padding: 5rem;
-    gap: 8rem;
-    
-}
-
-.icons{
+.container {
     display: grid;
+    grid-template-columns: 20% 80%;
 }
 
-#icon-img{
+.controller-user {
+    display: grid;
+    align-items: center;
+    border-radius: 100% ;
+}
+
+.label-user {
+    display: grid;
+    text-align: center;
+}
+
+.btn-user-escolha {
+    border: transparent;
+    background-color: transparent; 
+    border-radius: 100% ;
+}
+
+.icon-img-ativo{
     width: 4em;
     filter: invert(100%);
     padding: 0.5em;
@@ -31,25 +41,19 @@
     border-color: rgb(0, 0, 0);
 }
 
-.icon-img-ativo {
-    border-style: double ;
+span{
+    color: white;
 }
 
-#title-icon{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    font-size: 1em;
-    text-align: center;
-    padding-top: 5%;
-}
-
-.gerenciamento{
+.Gerenciamento{
+    display: flex;
+    width: 70%;
+    justify-content: center;
     background-color: #fff;
-    float: right;
     overflow-x: auto;
     padding: 2em;
     border-radius: 10px;
-    
+    margin-bottom: 5%;
 }
 
 
@@ -68,9 +72,10 @@
     font-weight: bold;
     font-size: 1em;
 }
-.demo td {
+.demo td {  
     border:1px Nenhum #707bff;
     padding: 1em;
+    text-align: center;
 }
 
 select{
@@ -80,32 +85,27 @@ select{
     border-radius: 5px;
 }
 
-
-#input {
-    display: none;
+.icon-img-ativo:hover {
+    border-color: #707bff;
 }
 
-.btn-user {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.btn-user-escolha:active {
+    transform: scale(0.95);
 }
 
-@media (max-width:1097px)  {
-    .main-users {
+@media (max-width:800px) {
+    
+
+    .container{
         display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        gap: 3.5em;
     }
 
-    .conteudo{
+    .controller-user {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8rem;
     }
-
-    .icons{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-} 
-
+}

@@ -3,6 +3,8 @@
 }
 
 .card-verif{
+    display: grid;
+    justify-items: center;
     background-color: #fff;
     margin-top: 70px;
     margin: 100px;
@@ -57,6 +59,8 @@
 
 
 #label{
+    display: grid;
+    justify-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1em;
