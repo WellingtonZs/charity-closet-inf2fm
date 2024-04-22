@@ -2,7 +2,7 @@
     background-color: #181818;
     margin: 0;
     text-align: center;
-    padding: 5%;
+    
 }
 
 .formulario-section{
@@ -136,7 +136,7 @@ input:focus {
 .form-2__inputs  {
     padding-left: 10px;
     padding-right: 10px;
-    width: 96%;
+    width: 100%;
     border-color: #8224fe;
     background-color: #fff;
     color: #8224fe;
@@ -194,7 +194,7 @@ label {
 #cnpj {
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 10px;
+    
     border-color: #8224fe;
     background-color: #fff;
     color: #8224fe;
@@ -289,8 +289,38 @@ label {
     transform: scale(1.1);
 }
 
-@media (max-width:1131px) {
+#selectuf{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #8224fe;
+    background-color: #fff;
+    color: #8224fe;
+    width: 100%;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 934px) {
+    .background {
+        background: #181818;
+    }
+    .picture{
+        margin-top: 2em;
+    }
     .formulario-section {
-        margin-top: 15%;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        margin-top: 2em;
+    }
+
+    .form-1 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .botao-form {
+        margin-bottom: 2em;
     }
 }

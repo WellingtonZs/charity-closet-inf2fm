@@ -6,3 +6,10 @@ function ToggleMenu() {
 }
 
 btnMobile.addEventListener('click', ToggleMenu);
+
+
+//navegação com button 
+function editar () {
+    window.location.href = 'editarperfilong.html';
+    
+  }

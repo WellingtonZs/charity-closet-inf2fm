@@ -5,6 +5,9 @@
     --cinza-escuro: #181818;
     --cinza-ainda-mais-escuro: #101010;
 }
+.background {
+    background: var(--cinza-ainda-mais-escuro);
+}
 
 .mainhome {
     background-color: var(--cinza-ainda-mais-escuro);
@@ -103,6 +106,7 @@
     padding-bottom: 100px;
     border-radius:25px;
     text-align: center;
+    font-size: 2em;
 }
 
 #text-avaliacao {
@@ -171,6 +175,31 @@ details {
 }
 
 @media screen and (max-width: 934px) {
+    .mainhome {
+      padding: 0;
+    }
+
+    #titulo1-1 {
+        font-size: 1.7em;
+        font-weight: 900;
+    }
+
+    #text-doe {
+        font-size: 1.50em;
+    }
+
+    .doeaquihome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #desc-doe {
+        width: 90%;
+        font-size: 1.5em;
+    }
+    
     .oddshome {
         display: flex;
         flex-direction: column;
@@ -190,6 +219,22 @@ details {
         grid-template-columns: 50% 50%;
         place-items: center;
 
+    }
+
+    .avaliacao {
+      display: flex;
+      flex-direction: column;
+      align-items: c;
+      padding: 0;
+      height: 20em;
+      margin-bottom: 2em;
+        
+    }
+
+    #text-avaliacao {
+        margin-top: 4.5em;
+        width: 100%;
+        font-size: 0.7em;
     }
 }
 

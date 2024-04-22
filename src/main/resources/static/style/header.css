@@ -75,7 +75,9 @@ ul {
 }
 
 @media (max-width: 800px) {
-
+    #cabecalho{
+        position: fixed;
+    }
     #menu {
         display: block;
         position: absolute;

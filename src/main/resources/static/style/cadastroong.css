@@ -133,7 +133,7 @@ input {
     color: #ffffff;
     font-family: Arial;
     font-size: 18px;
-    padding: 5px 38px;
+    padding: 5px 3em;
     text-decoration: none;
     border: none;
     margin-top: 40px;
@@ -181,4 +181,42 @@ input {
     font-weight: 600;
 }
 
+.btns {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+@media screen and (max-width: 934px) {
+    .coracaofigure {
+        margin-top: 2em;
+    }
+    
+    .formulario-section {
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+    }
+    #desc-h1 {
+        font-size: 2em;
+    }
+
+    .inputs-form {
+        display: block;
+    }
+
+    .form-2 {
+        border-right: #8224fe;
+        border-left: #fff;
+        border-top: #fff;
+        border-bottom: #fff;
+        border-style: solid;
+        margin: 0;
+        padding-right: 30px;
+    }
+
+    .btns {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
 

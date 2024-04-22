@@ -6,29 +6,30 @@
     <link rel="stylesheet" href="/style/usersadm.css">
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/reset.css">
+    <link rel="shortcut icon" href="/assets/backgroundappshort_Prancheta 1.png" type="image/x-icon">
     <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
  
-    <title>Document</title>
+    <title>Charity Connect ADM</title>
 </head>
 <body>
     <header id="cabecalho">
-        <a th:href="@{/charitycloset/index}" id="logo"><img src="/assets/longlogo-nobackground.png" style="width: 16rem;" alt=""></a>
+        <a href="/html/index.html" id="logo"><img src="/assets/charityConnect.png" style="width: 16rem;" alt=""></a>
         <nav id="nav">
           <button id="btn-mobile">
           <span id="hambuguer"></span>
           </button>
           <ul id="menu">
-            <li><a id="itens" th:href="@{/charitycloset/index}">Home</a></li>
-            <li><a id="itens" th:href="@{/charitycloset/contato}">Contato</a></li>
-            <li><a id="itens" th:href="@{/charitycloset/perfil-ong}">Meu Perfil ONG</a></li>
-            <li><a id="itens" th:href="@{/charitycloset/sobre-nos}">Sobre nós</a></li>
-            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" th:href="@{/charitycloset/login}"><span>Entrar</span></a></li>
+            <li><a id="itens" href="/html/index.html">Home</a></li>
+            <li><a id="itens" href="/html/catalogo.html">Catálogo</a></li>
+            <li><a id="itens" href="/html/perfilong.html">Meu Perfil ONG</a></li>
+            <li><a id="itens" href="/html/sobrenos.html">Sobre nós</a></li>
+            <li><a style="--clr:#707bff" class="btn-entrar" id="itens" href="/html/login.html"><span>Entrar</span></a></li>
           </ul>
         </nav>
       </header>
@@ -39,19 +40,20 @@
         </div>
 
         <div class="container">
+            
             <div class="controller-user">
                 <label class="label-user" for="btn-user-ong">
                     <button type="button" class="btn-user-escolha" id="btn-user-ong" onclick="mudarOngs()">
-                        <img class="icon-img-ativo" id="icon-img" src="/assets/usericon.png">
+                        <img style="display: none;" class="icon-img-ativo" id="icon-img" src="/assets/usericon.png">
                     </button>
-                    <span>ONGS</span>
+                    
                 </label>
 
                 <label class="label-user" for="btn-user">
                     <button type="button" class="btn-user-escolha" id="btn-user" onclick="mudarUser()">
-                        <img class="icon-img-ativo" id="icon-img" src="/assets/usericon.png">
+                        <img style="display: none;" class="icon-img-ativo" id="icon-img" src="/assets/usericon.png">
                     </button>
-                    <span>Usuários</span>
+                    
                 </label>
             </div>
 
@@ -160,18 +162,18 @@
             <figure class="logofooter">
                 <img id="logofooter" src="/assets/shortlogocharitycloset.png">
                 <h1 id="text-logo-footer">
-                    charity closet.
+                    Charity Connect.
                 </h1>
             </figure>
 
             <div class="footerpart2">
-                <a id="link-footer-pt2" th:href="@{/charitycloset/sobre-nos}">Sobre o Projeto</a>
-                <a id="link-footer-pt2" th:href="@{/charitycloset/contato}">Contato</a>
+                <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
+                <a id="link-footer-pt2" href="contato.html">Contato</a>
             </div>
 
             <div class="footerpart3">
-                <a id="link-footer-pt3" th:href="@{/charitycloset/politicas}">Política de Privacidade</a>
-                <a id="link-footer-pt3" th:href="@{/charitycloset/termosdeuso}">Termos de Uso</a>
+                <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
+                <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
 
             </div>
 
@@ -183,7 +185,7 @@
                             <li id="itemfooter">07 Gustavo Alves</li>
                             <li id="itemfooter">08 Gustavo Gomes</li>
                             <li id="itemfooter">14 Leandro Afonso Niches</li>
-                            <li id="itemfooter">24 Natalia Lima </li>
+                            <li id="itemfooter">24 Nathalia Lima </li>
                              <li id="itemfooter">28 Ruan Pablo Braga Mendes</li>
                             <li id="itemfooter">33 Wellington Cavalcante </li>
                            

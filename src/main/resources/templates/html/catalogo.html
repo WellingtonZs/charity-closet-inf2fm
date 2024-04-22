@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style/catalogo.css" rel="stylesheet">
+  <link href="/style/header.css" rel="stylesheet">
+  <link href="/style/footer.css" rel="stylesheet">
+  <link href="/style/reset.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/assets/backgroundappshort_Prancheta 1.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <title>catálogo | Charity Connect</title>
+</head>
+
+<body>
+
+  <header id="cabecalho">
+    <a href="/html/index.html" id="logo"><img src="/assets/charityConnect.png" style="width: 16rem;"
+        alt=""></a>
+    <nav id="nav">
+      <button id="btn-mobile">
+        <span id="hambuguer"></span>
+      </button>
+      <ul id="menu">
+        <li><a id="itens" href="/html/index.html">Home</a></li>
+        <li><a id="itens" href="/html/catalogo.html">Catálogo</a></li>
+        <li><a id="itens" href="/html/perfilong.html">Meu Perfil ONG</a></li>
+        <li><a id="itens" href="/html/sobrenos.html">Sobre nós</a></li>
+        <li><a style="--clr:#707bff" class="btn-entrar" id="itens" href="/html/login.html"><span>Entrar</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <body class="background">
+
+    <main>
+      <div class="input-wrapper">
+        <label for="filter" class="sr-only">Pesquisar</label>
+        <input id="filter" type="text" placeholder="Pesquisar">
+      </div>
+      <!--
+    <div class="checkbox-wrapper" style="display: flex; color:#fff">
+      <input type="checkbox" id="roupaCheckbox" value="roupa">
+      <label for="roupaCheckbox">Roupa</label>
+      <input type="checkbox" id="alimentoCheckbox" value="alimento">
+      <label for="alimentoCheckbox">Alimento</label>
+      <input type="checkbox" id="brinquedoCheckbox" value="brinquedo">
+      <label for="brinquedoCheckbox">Brinquedos</label>
+      <input type="checkbox" id="monetariaCheckbox" value="monetaria">
+      <label for="monetariaCheckbox">Monetária</label>
+  </div>
+-->
+
+<div class="category-filter">
+      <div class="select-wrapper-city">
+        <select id="interestsSelect-city">
+          <option value="">Selecione uma Cidade</option>
+          <option value="jandira">Jandira</option>
+          <option value="barueri">Barueri</option>
+          <option value="osasco">Osasco</option>
+          <option value="carapicuiba">Carapicuíba</option>
+        </select>
+      </div>
+
+
+      <div class="select-wrapper">
+        <select id="interestsSelect">
+          <option value="">Selecione um Interesse</option>
+          <option value="roupa">Roupas</option>
+          <option value="alimento">Alimentos</option>
+          <option value="brinquedo">Brinquedos</option>
+          <option value="monetaria">Monetária</option>
+        </select>
+      </div>
+
+     
+
+    </div>
+
+      <section class="cards">
+        <ul class="cards">
+          <li class="li_card" data-interests="monetaria" data-city="barueri">
+            <div class="item1">
+              <img src="/assets/ongs-02.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Sorrisos do Amanhã</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="/html/perfilong.html">Saiba Mais</a>
+
+            </div>
+
+          </li>
+          <li class="li_card" data-interests="roupas"  data-city="jandira">
+            <div class="item1">
+              <img src="/assets/ongs-03.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Mãos Solidárias</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="#">Saiba Mais</a>
+            </div>
+
+
+          </li>
+          <li class="li_card" data-interests="brinquedo"  data-city="osasco">
+            <div class="item1">
+              <img src="/assets/ongs-04.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Amigos do Bem-Estar</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="#">Saiba Mais</a>
+            </div>
+
+
+          </li>
+          <li class="li_card" data-interests="alimento" data-city="carapicuiba">
+            <div class="item1">
+              <img src="/assets/ongs-05.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Esperança em Ação</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="#">Saiba Mais</a>
+            </div>
+
+
+          </li>
+
+          <li class="li_card" data-interests="monetaria" data-city="barueri">
+            <div class="item1">
+              <img src="/assets/ongs_Prancheta 1.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Coração Generoso</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="#">Saiba Mais</a>
+
+            </div>
+
+          </li>
+
+          <li class="li_card" data-interests="roupa" data-city="jandira">
+            <div class="item1">
+              <img src="/assets/ongs-06.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Juntos pela Infância</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="#">Saiba Mais</a>
+
+            </div>
+
+          </li>
+
+          <li class="li_card" data-interests="brinquedo" data-city="osasco">
+            <div class="item1">
+              <img src="/assets/ongs-07.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Vida Renovada</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="#">Saiba Mais</a>
+
+            </div>
+
+          </li>
+
+          <li class="li_card" data-interests="alimento" data-city="carapicuiba">
+            <div class="item1">
+              <img src="/assets/ongs-08.png" alt="">
+            </div>
+            <div class="titulo">
+
+              <h2>Rede da Solidariedade</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut
+                maiores eveniet nemo incidunt distinctio et ducimus.
+              </p>
+              <a class="saiba_mais" href="#">Saiba Mais</a>
+
+            </div>
+
+          </li>
+
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footergeral">
+
+      <section class="footercontent">
+  
+        <figure class="logofooter">
+          <img id="logofooter" src="/assets/shortlogocharitycloset.png">
+          <h1 id="text-logo-footer">
+            Charity Connect.
+          </h1>
+        </figure>
+  
+        <div class="footerpart1">
+          <a href="loginadm.html" id="intranet">Acesso para Administradores </a>
+        </div>
+  
+        <div class="footerpart2">
+          <a id="link-footer-pt2" href="sobrenos.html">Sobre o Projeto</a>
+          <a id="link-footer-pt2" href="contato.html">Contato</a>
+        </div>
+  
+        <div class="footerpart3">
+          <a id="link-footer-pt3" href="politicas.html">Política de Privacidade</a>
+          <a id="link-footer-pt3" href="termosdeuso.html">Termos de Uso</a>
+  
+        </div>
+  
+        <div class="divisaodofooter2">
+          <div class="origemdotrabalho">
+            <div class="integrantesdiv">
+              <h2 id="itensfooter2">Integrantes:
+                <li id="itemfooter">02 Cauã Santana</li>
+                <li id="itemfooter">07 Gustavo Alves</li>
+                <li id="itemfooter">08 Gustavo Gomes</li>
+                <li id="itemfooter">13 Leandro Afonso Niches</li>
+                <li id="itemfooter">23 Nathalia Lima </li>
+                <li id="itemfooter">28 Ruan Pablo Braga Mendes</li>
+                <li id="itemfooter">32 Wellington Cavalcante </li>            </h2>
+            </div>
+            <div class="profediscfooter">
+              <h2 id="itensfooter2">ITB - FIEB
+                <li id="itemfooter">Brasílio Flores de Azevedo</li>
+              </h2>
+              <h2 id="itensfooter2">Curso
+                <li id="itemfooter">Informática 2022 - 2024</li>
+              </h2>
+            </div>
+          </div>
+  
+      </section>
+  
+    </footer>
+  
+
+    <script src="/script/fillter.js" defer></script>
+    <script type="text/javascript" src="/script/menu.js"></script>
+  </body>
+
+</html>

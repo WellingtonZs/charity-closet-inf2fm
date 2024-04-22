@@ -220,33 +220,24 @@ label {
     transform: scale(1.1);
 }
 
-@media (max-width: 890px) {
-    
-    .form{
-        width: 70%;
-    }
-    
-    .form-2 { 
-    display: grid;
-    grid-template-columns: 100%;
+@media screen and (max-width: 934px) {
+    #desc-h1 {
+        font-size: 2em;
     }
 
-    .form-3 { 
-        display: grid;
-        grid-template-columns: 100%;
-        }
 
+    .form-1{
+        width: 100%;
+        padding: 0;
+    }
+    
         .formulario-section{
             display: grid;
             justify-items: center;
-            width: 80%;
-            margin-left: 6%;
+            width: 100%;
+            margin: 0;
             padding: 10% 0%;
         }
 
-        .contato{
-            padding: 20% 2%;
-            display: grid;
-            justify-items: center;
-        }
+        
 }

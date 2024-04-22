@@ -101,3 +101,14 @@
     margin-top: 70px;
     margin-bottom:20px
 }
+
+@media screen and (max-width: 934px) {
+    .login-section {
+        width: 100%;
+        margin: 0;
+    }
+
+    #title-titulo-login {
+        font-size: 2em;
+    }
+}

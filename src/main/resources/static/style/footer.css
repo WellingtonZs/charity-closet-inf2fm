@@ -155,3 +155,25 @@
     text-decoration: underline;
     text-decoration-color:#b1b1b1;
 }
+
+@media screen and (max-width: 934px){
+    .footerpart3 {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .divisaodofooter2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 0;
+    }
+
+    .origemdotrabalho {
+        margin: 0;
+        padding: 0;
+    }
+
+    #itemfooter {
+        border-bottom: 1px solid #fff;
+    }
+}

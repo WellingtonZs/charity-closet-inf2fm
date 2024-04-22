@@ -4,10 +4,11 @@
 
 .card-verif{
     display: grid;
-    justify-items: center;
+    justify-items: left;
     background-color: #fff;
-    margin-top: 70px;
-    margin: 100px;
+    max-width: 30%;
+    margin: 0 auto;
+    margin-top: 5em;
     padding: 50px;
     border-radius: 25px;
 }
@@ -43,7 +44,7 @@
     background-color: #fff;
     color: #8224fe;
     font-weight: 600;
-    width: 400px;
+    width: 100%;
 }
 
 #codigo{
@@ -60,7 +61,7 @@
 
 #label{
     display: grid;
-    justify-items: center;
+    justify-items: left;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1em;
@@ -78,3 +79,22 @@
     font-weight: 600;
     width: 200px;
 }
+
+h1{
+    text-align: center;
+}
+
+@media screen and (max-width: 934px){
+    .card-verif {
+     width: 100%;
+     margin: 0;
+     padding:0;
+     max-width: 100%;
+     margin-top: 5em;
+     padding: 3em;
+    } 
+
+    #desc-verif{
+        max-width: 100%;
+    }
+ }

@@ -13,7 +13,6 @@
 
 .principal {
     background-color: black;
-    padding: 5%;
 }
 
 body {
@@ -29,6 +28,8 @@ body {
     text-align: center;
     margin-top: 2rem;
     border-radius: 25px 25px 0px 0px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #texto__sobre {
@@ -52,6 +53,8 @@ body {
     color: var(--branco);
     padding: 5% 5%;
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #cahrity_closet {
@@ -72,6 +75,8 @@ body {
 .container__terceario {
     background-color:var(--preto) ;
     color: var(--branco);
+    width: 90%;
+    margin: 0 auto;
 }
 
 #texto__3 {
@@ -121,6 +126,8 @@ body {
 .container__quarteario {
     background: var(--cor-de-fundo);
     display: grid;
+    width: 90%;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     padding: 3%;
@@ -165,11 +172,11 @@ strong {
 
 .div-gradiente-home{
     background: linear-gradient(to right, #707bff, #fa52ff);
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     height: 20px;
-    margin-top: -10px;
-    margin-left: 0;
     box-shadow: 10px 10px 61px 10px #8224fe;
+
 }
 
 #logoods{
@@ -182,10 +189,61 @@ strong {
     text-align: left;
 }
 
-@media (max-width:800px) {
+.ods_img_mobile {
+    display: none;
+}
+
+@media screen and (max-width: 934px) {
     .container__quarteario {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
     }
+
+    .container__principal{
+        margin-top: 2em;
+       
+    }
+
+    .container__secundario {
+        padding: 0;
+    }
+
+    #texto {
+        text-align: center;
+    }
+
+    .textos3 {
+        padding: 0;
+    }
+
+    #texto__topico__3 {
+        margin-bottom: 1em;
+    }
+
+    #teste {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .img__ods {
+        display: none;
+    }
+
+    .container__quarteario {
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+
+    #logoods {
+       margin-left: 5em;
+    }
+
+    .ods_img_mobile {
+        display: block;
+    }
+
+  
 }
