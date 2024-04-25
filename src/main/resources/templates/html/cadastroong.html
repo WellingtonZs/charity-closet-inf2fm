@@ -48,7 +48,7 @@
 
         <section class="formulario-section">
 
-            <form class="form" action="" method="post">
+            <form id="myForm" class="form" action="" method="post">
 
                 <div class="desc-form">
 
@@ -248,6 +248,49 @@
         </section>
 
     </footer>
+      <script>
+        document.getElementById('inputsenha').addEventListener('input', function() {
+            var senha = document.getElementById('inputsenha').value;
+            
+            // Verifica se a senha contém pelo menos um caractere especial
+            var specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            var hasSpecialChar = specialChars.test(senha);
+        
+            // Verifica se a senha contém pelo menos um número
+            var hasNumber = /\d/.test(senha);
+        
+            // Verifica se a senha contém pelo menos uma letra maiúscula
+            var hasUpperCase = /[A-Z]/.test(senha);
+        
+            if (hasSpecialChar && hasNumber && hasUpperCase) {
+                document.getElementById('inputsenha').setCustomValidity('');
+            } else {
+                document.getElementById('inputsenha').setCustomValidity('A senha deve conter pelo menos um caractere especial, um número e uma letra maiúscula.');
+            }
+        });
+        
+        document.getElementById('inputsenha1').addEventListener('input', function() {
+        var senha = document.getElementById('inputsenha').value;
+        var confirmarSenha = document.getElementById('inputsenha1').value;
+        var senhaError = document.getElementById('senha-error');
+
+        if (senha !== confirmarSenha) {
+            senhaError.textContent = 'As senhas não coincidem.';
+            document.getElementById('inputsenha1').setCustomValidity('As senhas não coincidem.');
+        } else {
+            senhaError.textContent = '';
+            document.getElementById('inputsenha1').setCustomValidity('');
+        }
+    });
+                
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+    var textareaValue = document.getElementById('textarea-form').value;
+    if (textareaValue.trim().length < 20) {
+        event.preventDefault(); // Impede o envio do formulário
+        alert("A descrição de atuação deve ter pelo menos 20 caracteres.");
+    }
+}); 
+    </script>
 
 </body>
 <script type="text/javascript" src="/script/menu.js"></script>

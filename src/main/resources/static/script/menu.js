@@ -13,3 +13,4 @@ function editar () {
     window.location.href = 'editarperfilong.html';
     
   }
+   
