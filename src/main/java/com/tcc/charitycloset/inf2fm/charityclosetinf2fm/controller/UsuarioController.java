@@ -17,7 +17,7 @@ public class UsuarioController {
 	public String novoUsuario( Model model) {
 		
 		model.addAttribute("usuarioOng", new UsuarioOng());
-		
+			
 		return "html/cadastroong";
 	}
 		
